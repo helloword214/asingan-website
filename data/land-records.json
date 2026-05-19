@@ -1,0 +1,32 @@
+[
+  {
+    "id": "deed-of-donation-300sqm-fire-station-site",
+    "documentTitle": "Deed of Donation",
+    "sourceFile": "/Users/johnmichaell.benito/Downloads/DEED OF DONATION 300sqm.pdf",
+    "donorEntity": "Municipality of Asingan, Pangasinan",
+    "donorRepresentative": "Carlos D. Lopez Sr.",
+    "donorRepresentativeTitle": "Municipal Mayor",
+    "doneeEntity": "Bureau of Fire Protection",
+    "doneeRepresentative": "Rogelio C. Mejia",
+    "doneeRepresentativeTitle": "Chief Inspector, Officer-in-Charge",
+    "deedDateDisplay": "February 19, 1996",
+    "deedDateIso": "1996-02-19",
+    "supportingResolution": "Resolution No. 4",
+    "supportingResolutionDateDisplay": "January 9, 1996",
+    "supportingResolutionDateIso": "1996-01-09",
+    "landAreaSquareMeters": 300,
+    "landAreaDisplay": "Three Hundred (300) square meters, more or less",
+    "location": "Asingan, Pangasinan",
+    "purpose": "Construction of the Fire Station building",
+    "lotNumber": null,
+    "notaryPublic": "Atty. Eladio C. Velasco",
+    "conditions": [
+      "The donated land is intended for the Fire Station building.",
+      "If the donee no longer uses the area for the Fire Station building, the donated area shall revert to the donor or the Municipality of Asingan."
+    ],
+    "notes": [
+      "The lot number was not saved yet because it is not fully clear in the scanned copy.",
+      "The PDF is a scanned document and some secondary registry details are hard to read."
+    ]
+  }
+]

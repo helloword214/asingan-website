@@ -1,0 +1,153 @@
+[
+  {
+    "id": "national-bfp-transition-ra-6975",
+    "title": "National Reorganization Under Republic Act No. 6975",
+    "dateDisplay": "January 1, 1991",
+    "dateIso": "1991-01-01",
+    "type": "National Context",
+    "summary": "The old PC-INP public safety structure transitioned into the reorganized DILG tri-bureau framework, separating the police, fire, and jail services into the PNP, BFP, and BJMP. This provided the national legal basis for the local transition of fire services, including Asingan, into the Bureau of Fire Protection.",
+    "sourceLabel": "Republic Act No. 6975",
+    "sourceUrl": "https://lawphil.net/statutes/repacts/ra1990/ra_6975_1990.html",
+    "sourceStatus": "Official legal basis.",
+    "notes": [
+      "This is national institutional context, not a specific local Asingan event."
+    ]
+  },
+  {
+    "id": "asingan-bfp-activation-1991",
+    "title": "Local Activation of BFP Asingan and Temporary Shared Office with PNP",
+    "dateDisplay": "1991",
+    "dateIso": null,
+    "type": "Local Transition",
+    "summary": "Based on the current project account, the fire service in Asingan transitioned into the Bureau of Fire Protection in 1991 under INSP FELIX G BALLESTEROS. During the early period when there was still no dedicated fire station, the unit reportedly shared office space with the PNP, reflecting continuity from the old PC-INP era. Many early personnel were understood to have come from the PC-INP period.",
+    "sourceLabel": "Project oral history and saved fire marshal timeline",
+    "sourceUrl": null,
+    "sourceStatus": "Working local account provided on May 17, 2026; should be supported later by station records, photos, or commemorative materials if available.",
+    "notes": [
+      "The exact activation date in 1991 has not yet been confirmed.",
+      "The shared-office detail is currently saved as local historical account, not yet as document-backed evidence."
+    ]
+  },
+  {
+    "id": "asingan-fire-station-land-resolution-1996",
+    "title": "Resolution No. 4 Supporting the Fire Station Site",
+    "dateDisplay": "January 9, 1996",
+    "dateIso": "1996-01-09",
+    "type": "Land and Station Development",
+    "summary": "The Municipality of Asingan adopted Resolution No. 4, which supported the availability of a 300-square-meter parcel of land for the construction of the fire station building.",
+    "sourceLabel": "Deed of Donation PDF",
+    "sourceUrl": null,
+    "sourceStatus": "Document-backed through the scanned deed reviewed on May 17, 2026.",
+    "notes": []
+  },
+  {
+    "id": "asingan-fire-station-deed-of-donation-1996",
+    "title": "Execution of the Deed of Donation for the Fire Station Site",
+    "dateDisplay": "February 19, 1996",
+    "dateIso": "1996-02-19",
+    "type": "Land and Station Development",
+    "summary": "The Municipality of Asingan, represented by Municipal Mayor Carlos D. Lopez Sr., executed a Deed of Donation in favor of the Bureau of Fire Protection for a 300-square-meter parcel in Asingan, Pangasinan intended for the construction of the fire station building.",
+    "sourceLabel": "Deed of Donation PDF",
+    "sourceUrl": null,
+    "sourceStatus": "Document-backed through the scanned deed reviewed on May 17, 2026.",
+    "notes": [
+      "The deed identifies CHIEF INSPECTOR ROGELIO C MEJIA as the donee representative.",
+      "The exact lot number is still unconfirmed from the scanned copy."
+    ]
+  },
+  {
+    "id": "jiangte-fire-truck-acquisition-2015",
+    "title": "Acquisition of the Jiangte Dongfeng Fire Truck",
+    "dateDisplay": "February 15, 2015",
+    "dateIso": "2015-02-15",
+    "type": "Asset Milestone",
+    "summary": "The Jiangte Dongfeng Fire Truck was acquired during the leadership period of FINSP LORETO M BERNARDINO and during the administration of Mayor Heidee Chua.",
+    "sourceLabel": "Project vehicle record and station account",
+    "sourceUrl": null,
+    "sourceStatus": "Working local record saved on May 17, 2026.",
+    "notes": []
+  },
+  {
+    "id": "loreto-bernardino-assumes-leadership-2014",
+    "title": "FINSP LORETO M BERNARDINO Assumes Leadership",
+    "dateDisplay": "February 17, 2014",
+    "dateIso": "2014-02-17",
+    "type": "Leadership",
+    "summary": "Based on the current project fire marshal timeline, FINSP LORETO M BERNARDINO began serving as head of BFP Asingan on February 17, 2014. This period would later be associated with the transition into the new fire station era.",
+    "sourceLabel": "Project fire marshal timeline",
+    "sourceUrl": null,
+    "sourceStatus": "Working local record saved on May 16, 2026.",
+    "notes": []
+  },
+  {
+    "id": "asingan-bfp-building-inauguration-2017",
+    "title": "Blessing and Ribbon Cutting Ceremony of the Bureau of Fire Protection Building",
+    "dateDisplay": "September 7, 2017",
+    "dateIso": "2017-09-07",
+    "type": "Inauguration",
+    "summary": "Mayor Heidee Chua and Vice Mayor Carlos F. Lopez Jr. led the blessing and ribbon cutting ceremony of newly constructed buildings in Asingan, including the Bureau of Fire Protection building. In the current station timeline, this milestone falls within the leadership period of FINSP LORETO M BERNARDINO.",
+    "sourceLabel": "Official LGU Website of Asingan Pangasinan",
+    "sourceUrl": "https://www.asingan.gov.ph/asingan-top-lgu-officials-vow-more-support-to-asinganians/",
+    "sourceStatus": "Search snippet captured on May 17, 2026; live page currently returns a database error when fetched directly.",
+    "notes": [
+      "The same event may also exist on the public BFP Asingan Facebook page, but direct Facebook scraping is brittle and may require a browser or login.",
+      "Based on current station account, the new fire station belongs to the period of FINSP LORETO M BERNARDINO and the administration of Mayor Heidee Chua."
+    ]
+  },
+  {
+    "id": "earlier-fire-station-demolition-2017",
+    "title": "Demolition of the Earlier Asingan Fire Station Structure",
+    "dateDisplay": "2017",
+    "dateIso": null,
+    "type": "Station Site Transition",
+    "summary": "Based on the current project instruction for the station history, the earlier Asingan Fire Station structure was demolished in 2017. The exact demolition date has not yet been confirmed in the project files.",
+    "sourceLabel": "Current project instruction and saved demolition photo set",
+    "sourceUrl": null,
+    "sourceStatus": "Working local record saved on May 18, 2026; exact demolition date still needs confirmation.",
+    "notes": [
+      "Only the year 2017 is currently confirmed in the project conversation.",
+      "The old station photo is now separated into the repository's history image set.",
+      "Saved demolition photos are currently stored under public/images/mock-station/history-fs/demolation-history/."
+    ]
+  },
+  {
+    "id": "best-municipal-fire-station-pangasinan-2019",
+    "title": "Recognized as Best Municipal Fire Station in Pangasinan for 2019",
+    "dateDisplay": "August 16, 2019",
+    "dateIso": "2019-08-16",
+    "type": "Recognition",
+    "summary": "Asingan Fire Station was recognized as Best Municipal Fire Station for 2019 in Pangasinan during the 28th Founding Anniversary of BFP Region 1 in Dagupan City, marking a strong year of station performance and public service.",
+    "sourceLabel": "Official LGU Website of Asingan Pangasinan",
+    "sourceUrl": "https://www.asingan.gov.ph/bfp-asingan-pinarangalan-bilang-pinakamahusay-na-fire-station/",
+    "sourceStatus": "Official LGU page snippet captured on May 19, 2026 through search results; the live page content was not fetched directly in this pass.",
+    "notes": [
+      "The official snippet states that Asingan led among 44 municipalities in Pangasinan."
+    ]
+  },
+  {
+    "id": "best-municipal-fire-station-second-class-region-1-2022",
+    "title": "Named Best Municipal Fire Station (Second Class) of BFP Region 1",
+    "dateDisplay": "August 24, 2022",
+    "dateIso": "2022-08-24",
+    "type": "Recognition",
+    "summary": "Asingan Fire Station received a plaque of recognition as Best Municipal Fire Station (Second Class) of the Year 2022 during the Organizational Unit Awards held as part of the 31st BFP Anniversary Celebration in San Fernando City, La Union.",
+    "sourceLabel": "Official LGU Website of Asingan Pangasinan",
+    "sourceUrl": "https://www.asingan.gov.ph/asingan-fire-station-as-the-best-municipal-fire-station-second-class-of-bfp-region-1/",
+    "sourceStatus": "Official LGU page snippet captured on May 19, 2026 through search results; the live page content was not fetched directly in this pass.",
+    "notes": [
+      "The official wording refers to Best Municipal Fire Station (Second Class), not a municipality award."
+    ]
+  },
+  {
+    "id": "hino-fire-truck-acquisition-2022",
+    "title": "Acquisition of the Hino Fire Truck",
+    "dateDisplay": "December 9, 2022",
+    "dateIso": "2022-12-09",
+    "type": "Asset Milestone",
+    "summary": "The Hino Fire Truck was acquired during the leadership period of FINSP ROGELIO S QUIZON JR and during the administration of Mayor Carlos F. Lopez Jr.",
+    "sourceLabel": "Project vehicle record and station account",
+    "sourceUrl": null,
+    "sourceStatus": "Working local record saved on May 17, 2026.",
+    "notes": []
+  }
+]

@@ -1,0 +1,135 @@
+[
+  {
+    "id": "felix-g-ballesteros",
+    "rank": "INSP",
+    "name": "FELIX G BALLESTEROS",
+    "displayName": "INSP FELIX G BALLESTEROS",
+    "termStartDisplay": "1991",
+    "termEndDisplay": "February 16, 2014",
+    "termStartIso": null,
+    "termEndIso": "2014-02-16",
+    "status": "past",
+    "image": "/images/mock-personnel/fire-marshals/FISNP-BALLESTEROS.png",
+    "notes": [
+      "He served as Asingan Fire Station's longest-tenured fire marshal. His years in leadership covered the old fire station period and the deed of donation for the station lot."
+    ]
+  },
+  {
+    "id": "loreto-m-bernardino",
+    "rank": "FINSP",
+    "name": "LORETO M BERNARDINO",
+    "displayName": "FINSP LORETO M BERNARDINO",
+    "termStartDisplay": "February 17, 2014",
+    "termEndDisplay": "May 31, 2020",
+    "termStartIso": "2014-02-17",
+    "termEndIso": "2020-05-31",
+    "status": "past",
+    "image": "/images/mock-personnel/fire-marshals/FINSP-BERNARDINO.png",
+    "notes": [
+      "His term was the second longest in the station's leadership line. The new station building, the Jiangte fire truck, and the L300 rescue vehicle all came during his leadership."
+    ]
+  },
+  {
+    "id": "nerrisa-m-bruan",
+    "rank": "FINSP",
+    "name": "NERRISA M BRUAN",
+    "displayName": "FINSP NERRISA M BRUAN",
+    "termStartDisplay": "June 1, 2020",
+    "termEndDisplay": "June 9, 2022",
+    "termStartIso": "2020-06-01",
+    "termEndIso": "2022-06-09",
+    "status": "past",
+    "image": "/images/mock-personnel/fire-marshals/FINSP-BRUAN.png",
+    "notes": [
+      "During her leadership, the fire station extension at the rear took shape, adding a kitchen, an FSES room, an upper storeroom, and a roof deck. The whole fire station was also repainted during her term. She also helped source EMS supplies through coordination with the LGU, PSCO, and other agencies, while the L300 rescue vehicle repaint and Morita fire truck upgrades, including leather seats, were completed during her leadership."
+    ]
+  },
+  {
+    "id": "rogelio-s-quizon-jr",
+    "rank": "FINSP",
+    "name": "ROGELIO S QUIZON JR",
+    "displayName": "FINSP ROGELIO S QUIZON JR",
+    "termStartDisplay": "June 10, 2022",
+    "termEndDisplay": "February 5, 2023",
+    "termStartIso": "2022-06-10",
+    "termEndIso": "2023-02-05",
+    "status": "past",
+    "image": "/images/mock-personnel/fire-marshals/FINSP-QUIZON.png",
+    "notes": [
+      "During his leadership, Asingan Fire Station received the Toyota Japan ambulance, which strengthened EMS and emergency response support."
+    ]
+  },
+  {
+    "id": "froilan-p-esperon",
+    "rank": "SFO4",
+    "name": "FROILAN P ESPERON",
+    "displayName": "SFO4 Froilan P Esperon",
+    "termStartDisplay": "February 6, 2023",
+    "termEndDisplay": "June 15, 2023",
+    "termStartIso": "2023-02-06",
+    "termEndIso": "2023-06-15",
+    "status": "past",
+    "image": "/images/mock-personnel/fire-marshals/SFO4-Esperon.png",
+    "notes": [
+      "During his leadership, the Hino fire truck joined the station fleet, adding a more modern fire truck to the station's response capability."
+    ]
+  },
+  {
+    "id": "nardo",
+    "rank": "FINSP",
+    "name": "WILFREDO L NARDO",
+    "displayName": "FINSP WILFREDO L NARDO",
+    "termStartDisplay": "June 26, 2023",
+    "termEndDisplay": "September 13, 2023",
+    "termStartIso": "2023-06-26",
+    "termEndIso": "2023-09-13",
+    "status": "past",
+    "image": "/images/mock-personnel/fire-marshals/FINSP-NARDO.png",
+    "notes": [
+      "His term helped maintain continuity in station service during a short leadership transition."
+    ]
+  },
+  {
+    "id": "paltao",
+    "rank": "FSINSP",
+    "name": "RIZELLE ANNE R PALTAO",
+    "displayName": "FSINSP RIZELLE ANNE R PALTAO",
+    "termStartDisplay": "September 14, 2023",
+    "termEndDisplay": "May 6, 2024",
+    "termStartIso": "2023-09-14",
+    "termEndIso": "2024-05-06",
+    "status": "past",
+    "image": "/images/mock-personnel/fire-marshals/FSINSP-PALTAO.png",
+    "notes": [
+      "During her leadership, several station welfare improvements for personnel were added, including a washing machine, televisions, CCTV support, and water dispensers. Her term also saw the creation of an internal FSES records system that supported profiling, establishment numbering, and faster file retrieval before the newer FSIS system later became the main platform for much of that work."
+    ]
+  },
+  {
+    "id": "harry-f-carig",
+    "rank": "FINSP",
+    "name": "HARRY F CARIG",
+    "displayName": "FINSP HARRY F CARIG",
+    "termStartDisplay": "May 7, 2024",
+    "termEndDisplay": "February 15, 2026",
+    "termStartIso": "2024-05-07",
+    "termEndIso": "2026-02-15",
+    "status": "past",
+    "image": "/images/mock-personnel/fire-marshals/FINSP-CARIG.png",
+    "notes": [
+      "During his leadership, a front canopy extension was added to the fire station to provide added shelter for fire trucks. A new office extension was also completed at the ground level, while the FSES office, kitchen tiles, and other parts of the station underwent further repairs and improvement."
+    ]
+  },
+  {
+    "id": "derrick-p-zulueta",
+    "rank": "SFO4",
+    "name": "DERRICK P ZULUETA",
+    "displayName": "SFO4 Derrick P Zulueta",
+    "termStartDisplay": "February 16, 2026",
+    "termEndDisplay": "Present",
+    "termStartIso": "2026-02-16",
+    "termEndIso": null,
+    "status": "present",
+    "image": "/images/mock-personnel/fire-marshals/SFO4-Zulueta.png",
+    "notes": []
+  }
+]

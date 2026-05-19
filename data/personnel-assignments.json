@@ -1,0 +1,172 @@
+{
+  "status": "assignment_layer_initialized_for_flexible_role_replacement",
+  "lastUpdated": "2026-05-17",
+  "structureRef": "data/organization-structure.json",
+  "personnelRef": "data/personnels.json",
+  "notes": [
+    "This file stores who currently occupies each role slot without rewriting the organization structure.",
+    "When someone leaves a role, move the old assignment to assignmentArchive and add the replacement under the same roleId.",
+    "Do not delete the outgoing person's profile from data/personnels.json just because the role assignment changed.",
+    "Only the assignment layer should change during routine staffing turnover, including archived role history."
+  ],
+  "publicDisplayRule": "Use currentAssignments for the active organization chart and use assignmentArchive for former role holders.",
+  "archiveVisibilityRule": "Preserve former assignees in assignmentArchive by default. The public website may choose to hide the archive section, but project records should keep it.",
+  "archiveWorkflow": [
+    "Keep the role slot in data/organization-structure.json unchanged.",
+    "Remove only the outgoing person from currentAssignments for that roleId.",
+    "Append the outgoing assignment record to assignmentArchive with endedAtIso and a note if available.",
+    "Add the replacement person under the same roleId in currentAssignments.",
+    "Keep the person's profile in data/personnels.json even after they are no longer current in the org chart."
+  ],
+  "currentAssignments": [
+    {
+      "roleId": "head-of-station-fire-marshal",
+      "personnelId": "derrick-p-zulueta",
+      "assignmentStatus": "confirmed_current",
+      "effectiveStartIso": "2026-02-16",
+      "sourceRefs": [
+        "data/fire-marshals.json",
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "administrative-section-chief",
+      "personnelId": "michelle-p-bitantes",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "personnel-training-unit-chief",
+      "personnelId": "michelle-p-bitantes",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "fire-safety-enforcement-section-chief",
+      "personnelId": "chester-bryan-a-serapion",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "fire-prevention-unit-chief",
+      "personnelId": "chester-bryan-a-serapion",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "operations-section-chief",
+      "personnelId": "roselli-i-bernal",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "iiu-chief",
+      "personnelId": "roselli-i-bernal",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "community-relations-unit-chief",
+      "personnelId": "roselli-i-bernal",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "commel-chief",
+      "personnelId": "arcille-mae-y-caras",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "morale-and-welfare-unit-chief",
+      "personnelId": "arcille-mae-y-caras",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "logistics-unit-chief",
+      "personnelId": "ronniel-c-mariano",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "ems-chief",
+      "personnelId": "john-michael-l-benito",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "rescue-unit-chief",
+      "personnelId": "john-michael-l-benito",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "fire-engine-company-chief",
+      "personnelId": "ronald-l-carilla-jr",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    },
+    {
+      "roleId": "shift-b-commander",
+      "personnelId": "roselli-i-bernal",
+      "assignmentStatus": "workbook_derived_current",
+      "sourceRefs": [
+        "data/personnels.json"
+      ]
+    }
+  ],
+  "unresolvedAssignments": [
+    {
+      "roleId": "records-and-leave-management-unit-chief",
+      "candidatePersonnelIds": [
+        "michelle-p-bitantes",
+        "wilfredo-n-oril-jr"
+      ],
+      "reason": "Workbook-derived designations overlap across sheets, so the current assignee still needs final confirmation."
+    },
+    {
+      "roleId": "finance-unit-chief",
+      "candidatePersonnelIds": [
+        "jay-son-b-enriquez",
+        "wilfredo-n-oril-jr"
+      ],
+      "reason": "Workbook-derived designations overlap across sheets, so the current assignee still needs final confirmation."
+    },
+    {
+      "roleId": "shift-a-commander",
+      "candidatePersonnelIds": [
+        "michelle-p-bitantes",
+        "reuben-i-guindalos"
+      ],
+      "reason": "The chart and workbook sources do not align cleanly for the Shift A commander role."
+    }
+  ],
+  "assignmentArchive": []
+}

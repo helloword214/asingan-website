@@ -1,0 +1,716 @@
+{
+  "status": "public_profile_fields_extracted_from_april_2026_workbook",
+  "lastUpdated": "2026-05-17",
+  "sourceWorkbook": "/Users/johnmichaell.benito/Downloads/April Admin Monthly.xlsx",
+  "station": "Asingan Fire Station",
+  "coreActiveRosterCount": 19,
+  "coreSourceSheets": [
+    "BFP Roster of Troops",
+    "Upgrading Data of BFP Pers",
+    "Personnel Profile Report",
+    "Profile of BFP Uniformed Pers",
+    "PSIPOP",
+    "Duty Detail April"
+  ],
+  "publicProfileRule": "This file stores public-facing personnel profile fields and excludes sensitive personal data not needed for the website.",
+  "displayNameStyleRule": "For public uniformed personnel display names, do not use a period after middle initials. If the rank is a fire officer rank such as FO1, FO2, FO3, FO4, SFO1, SFO2, SFO3, or SFO4, keep the rank uppercase but render the person's name in proper case. If the rank is an inspector rank such as INSP, FINSP, FSINSP, or FISNP, render the full public display name in uppercase.",
+  "assignmentDataRef": "data/personnel-assignments.json",
+  "serviceHistoryDataRef": "data/personnel-service-history.json",
+  "recordLifecycleRule": "Do not delete former personnel profiles when they are replaced in a role. Keep their profile here and let the assignment layer decide whether they are current or archived in the organization chart.",
+  "designationMergeRule": "Designations were combined from the main personnel sheets to preserve as much confirmed role data as possible, then lightly normalized for obvious spelling issues.",
+  "withheldSensitiveFieldsAvailableInSource": [
+    "exact birth dates",
+    "place of birth",
+    "home addresses",
+    "cellphone numbers",
+    "TIN",
+    "religion",
+    "civil status",
+    "daily duty and off-duty schedules"
+  ],
+  "records": [
+    {
+      "id": "harry-f-carig",
+      "rank": "FINSP",
+      "name": "HARRY F CARIG",
+      "displayName": "FINSP HARRY F CARIG",
+      "itemNumber": "U-08-0005",
+      "officialNameParts": {
+        "lastName": "Carig",
+        "firstName": "Harry",
+        "middleName": "Fonbuena"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/fire-marshals/FINSP-CARIG.png",
+      "designations": [
+        "ON FOBC TRAINING"
+      ],
+      "designationAuthority": "S.O # TRN-2026-010",
+      "educationalAttainment": "Bachelor of Science in Nursing",
+      "eligibility": "RA 1080",
+      "mandatoryTraining": "FOCC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "1997-10-01",
+      "dateLastPromotionIso": "2024-05-02",
+      "dateRetirementIso": "2029-08-23",
+      "lengthOfServiceDisplay": "28 Years and 4 Month",
+      "notes": [
+        "Roster and uniformed profile list this record as training-related rather than a regular duty designation."
+      ]
+    },
+    {
+      "id": "derrick-p-zulueta",
+      "rank": "SFO4",
+      "name": "Derrick P Zulueta",
+      "displayName": "SFO4 Derrick P Zulueta",
+      "itemNumber": "U-08-0129",
+      "officialNameParts": {
+        "lastName": "Zulueta",
+        "firstName": "Derrick",
+        "middleName": "Pastorin"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/fire-marshals/SFO4-Zulueta.png",
+      "designations": [
+        "ACTING MUNICIPAL FIRE MARSHAL",
+        "COLLECTING OFFICER"
+      ],
+      "designationAuthority": "R.O # REA-2026-011",
+      "educationalAttainment": "Bachelor of Science in Electrical Engineering",
+      "eligibility": "RA 1080",
+      "mandatoryTraining": "FOCC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "1999-12-06",
+      "dateLastPromotionIso": "2022-12-19",
+      "dateRetirementIso": "2027-08-24",
+      "lengthOfServiceDisplay": "26 Years 4 Months",
+      "notes": [
+        "Upgrading Data sheet appears misaligned for this row, so date-of-birth was not trusted from that sheet."
+      ]
+    },
+    {
+      "id": "chester-bryan-a-serapion",
+      "rank": "SFO4",
+      "name": "Chester Bryan A Serapion",
+      "displayName": "SFO4 Chester Bryan A Serapion",
+      "itemNumber": "U-09-0245",
+      "officialNameParts": {
+        "lastName": "Serapion",
+        "firstName": "Chester Bryan",
+        "middleName": "Agas"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/SFO4-Serapion.jpeg",
+      "designations": [
+        "DEPUTY MUNICIPAL FIRE MARSHAL",
+        "CHIEF, FIRE SAFETY AND ENFORCEMENT SECTION",
+        "CHIEF, FIRE PREVENTION UNIT"
+      ],
+      "designationAuthority": "P.O # DSG 2026-007",
+      "educationalAttainment": "Bachelor of Science in Nursing",
+      "eligibility": "RA 1080",
+      "mandatoryTraining": "FPSC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "1999-12-06",
+      "dateLastPromotionIso": "2025-07-18",
+      "dateRetirementIso": "2032-04-15",
+      "lengthOfServiceDisplay": "26 Years 4 Months",
+      "notes": [
+        "Upgrading Data sheet contains an implausible retirement year for one source row, so retirement was taken from stronger or safer sources when available."
+      ]
+    },
+    {
+      "id": "roselli-i-bernal",
+      "rank": "SFO1",
+      "name": "Roselli I Bernal",
+      "displayName": "SFO1 Roselli I Bernal",
+      "itemNumber": "U-11-1301",
+      "officialNameParts": {
+        "lastName": "Bernal",
+        "firstName": "Roselli",
+        "middleName": "Icari"
+      },
+      "sex": "Female",
+      "photo": "/images/mock-personnel/personnels/SFO1-Bernal.jpeg",
+      "designations": [
+        "CHIEF, OPERATIONS SECTION",
+        "CHIEF, INVESTIGATION AND INTELLIGENCE UNIT",
+        "COLLECTING OFFICER",
+        "BUILDING PLAN EVALUATOR",
+        "COMMANDER SHIFT B",
+        "LEAD FIRE INVESTIGATOR- TEAM LEADER",
+        "CHIEF, COMMUNITY RELATIONS UNIT"
+      ],
+      "designationAuthority": "P.O # DSG-2025-102",
+      "educationalAttainment": "BSE Mathematics Major",
+      "eligibility": "RA 1080",
+      "mandatoryTraining": "FAIIC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2009-07-15",
+      "dateLastPromotionIso": "2017-12-15",
+      "dateRetirementIso": "2041-06-25",
+      "lengthOfServiceDisplay": "16 Years 9 Months"
+    },
+    {
+      "id": "michelle-p-bitantes",
+      "rank": "FO3",
+      "name": "Michelle P Bitantes",
+      "displayName": "FO3 Michelle P Bitantes",
+      "itemNumber": "U-13-4788",
+      "officialNameParts": {
+        "lastName": "Bitantes",
+        "firstName": "Michelle",
+        "middleName": "Panagsagan"
+      },
+      "sex": "Female",
+      "photo": "/images/mock-personnel/personnels/FO3-Bintantes.jpeg",
+      "designations": [
+        "CHIEF, ADMINISTRATIVE SECTION",
+        "COMMANDER SHIFT A",
+        "COMMANDER SHIFT B",
+        "CHIEF, PERSONNEL TRAINING UNIT",
+        "CHIEF, RECORDS AND LEAVE MANAGEMENT UNIT",
+        "RECORDS CUSTODIAN",
+        "LINEWOMAN",
+        "GENDER AND DEVELOPMENT FOCALE PERSONNEL",
+        "LEAVE PROCESSOR",
+        "ASSESSOR"
+      ],
+      "designationAuthority": "P.O. #2024-026",
+      "educationalAttainment": "BS Agricultural Education",
+      "eligibility": "RA 1080",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2014-11-28",
+      "dateLastPromotionIso": "2023-12-27",
+      "dateRetirementIso": "2042-12-09",
+      "lengthOfServiceDisplay": "11 Years 5 Months",
+      "notes": [
+        "Photo filename uses the spelling \"Bintantes\" while workbook records use \"Bitantes\".",
+        "Duty Detail assigns Shift A while another workbook sheet mentions Shift B; shift assignment should be re-verified before public use."
+      ]
+    },
+    {
+      "id": "wilfredo-n-oril-jr",
+      "rank": "FO2",
+      "name": "Wilfredo N Oril Jr",
+      "displayName": "FO2 Wilfredo N Oril Jr",
+      "itemNumber": "U-13-4935",
+      "officialNameParts": {
+        "lastName": "Oril",
+        "firstName": "Wilfredo Jr",
+        "middleName": "Ninalga"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO2-Oril.jpeg",
+      "designations": [
+        "FIRE SAFETY INSPECTOR",
+        "CHIEF, RECORDS AND LEAVE MANAGEMENT UNIT",
+        "DRIVER AND PUMP OPERATOR",
+        "ASSESSOR",
+        "LEAVE PROCESSOR",
+        "COLLECTING AGENT",
+        "CHIEF, FINANCE UNIT"
+      ],
+      "designationAuthority": "S.O # 2025-03-003",
+      "educationalAttainment": "Bachelor of Arts in English",
+      "eligibility": "FOE",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2014-12-12",
+      "dateLastPromotionIso": "2021-12-23",
+      "dateRetirementIso": "2046-07-11",
+      "lengthOfServiceDisplay": "11 Years 2 Months"
+    },
+    {
+      "id": "ronniel-c-mariano",
+      "rank": "FO2",
+      "name": "Ronniel C Mariano",
+      "displayName": "FO2 Ronniel C Mariano",
+      "itemNumber": "U-13-4910",
+      "officialNameParts": {
+        "lastName": "Mariano",
+        "firstName": "Ronniel",
+        "middleName": "Calamba"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO2-Mariano.jpeg",
+      "designations": [
+        "CHIEF, LOGISTICS UNIT",
+        "FIRE SAFETY INSPECTOR",
+        "DRIVER AND PUMP OPERATOR",
+        "ASSESSOR",
+        "RECORDS AND LEAVE MANAGEMENT UNIT STAFF",
+        "FIRE PREVENTION UNIT STAFF",
+        "OPERATION STAFF",
+        "OFFICER-IN-CHARGE, LOGISTICS UNIT"
+      ],
+      "designationAuthority": "P.O. #2023-095",
+      "educationalAttainment": "BS Civil Engineering",
+      "eligibility": "RA 1080 / FOE",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2015-07-01",
+      "dateLastPromotionIso": "2021-12-23",
+      "dateRetirementIso": "2044-01-14",
+      "lengthOfServiceDisplay": "10 Years 9 Months"
+    },
+    {
+      "id": "john-michael-l-benito",
+      "rank": "FO2",
+      "name": "John Michael L Benito",
+      "displayName": "FO2 John Michael L Benito",
+      "itemNumber": "U-13-4783",
+      "officialNameParts": {
+        "lastName": "Benito",
+        "firstName": "John Michael",
+        "middleName": "Laxamana"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO2-Benito.jpeg",
+      "designations": [
+        "CHIEF, EMERGENCY MEDICAL SERVICES",
+        "EMERGENCY MEDICAL TECHNICIAN",
+        "SEARCH, RESCUE AND RETRIEVAL",
+        "FIRE SAFETY INSPECTOR",
+        "DRIVER AND PUMP OPERATOR",
+        "CHIEF, RESCUE UNIT",
+        "FIRE PREVENTION UNIT STAFF",
+        "CUSTOMER RELATIONS OFFICER"
+      ],
+      "designationAuthority": "P.O. # 2024-041",
+      "educationalAttainment": "BS Nursing Graduate",
+      "eligibility": "RA 1080",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2016-07-01",
+      "dateLastPromotionIso": "2021-12-23",
+      "dateRetirementIso": "2046-10-26",
+      "lengthOfServiceDisplay": "9 Years 9 Months"
+    },
+    {
+      "id": "jay-son-b-enriquez",
+      "rank": "FO2",
+      "name": "Jay-Son B Enriquez",
+      "displayName": "FO2 Jay-Son B Enriquez",
+      "itemNumber": "U-13-7447",
+      "officialNameParts": {
+        "lastName": "Enriquez",
+        "firstName": "Jay-Son",
+        "middleName": "Ballesteros"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/F02-Enriquez.jpeg",
+      "designations": [
+        "SPECIAL DISBURSING OFFICER",
+        "CHIEF, FINANCE UNIT",
+        "ASSESSOR",
+        "FIRE INVESTIGATOR ON CASE",
+        "FIRE INVESTIGATION TECHNICIAN- SKETCH PREPARER",
+        "BUMBERO SA BARANGAY"
+      ],
+      "designationAuthority": "Regional Order No. DSG-2025-023",
+      "educationalAttainment": "BS Criminology",
+      "eligibility": "RA 1080",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2017-02-17",
+      "dateLastPromotionIso": "2022-07-01",
+      "dateRetirementIso": "2049-01-02",
+      "lengthOfServiceDisplay": "9 Years and 0 Months",
+      "notes": [
+        "Photo filename uses \"F02\" instead of \"FO2\"."
+      ]
+    },
+    {
+      "id": "arcille-mae-y-caras",
+      "rank": "FO2",
+      "name": "Arcille Mae Y Caras",
+      "displayName": "FO2 Arcille Mae Y Caras",
+      "itemNumber": "U-13-1190",
+      "officialNameParts": {
+        "lastName": "Caras",
+        "firstName": "Arcille Mae",
+        "middleName": "Yabut"
+      },
+      "sex": "Female",
+      "photo": "/images/mock-personnel/personnels/FO2-Caras.jpeg",
+      "designations": [
+        "COLLECTING AGENT",
+        "CHIEF, COMMEL",
+        "RECORDS CUSTODIAN",
+        "MEDICAL FIRST RESPONDER",
+        "CHIEF, MORALE AND WELFARE UNIT",
+        "PUBLIC INFORMATION OFFICER",
+        "LINEWOMAN",
+        "ASSESSOR"
+      ],
+      "designationAuthority": "Regional Order No. DSG-2025-018",
+      "educationalAttainment": "BSE English Major",
+      "eligibility": "RA 1080",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2017-07-01",
+      "dateLastPromotionIso": "2022-12-19",
+      "dateRetirementIso": "2051-07-29",
+      "lengthOfServiceDisplay": "8 Years 9 Months"
+    },
+    {
+      "id": "ronald-l-carilla-jr",
+      "rank": "FO2",
+      "name": "Ronald L Carilla Jr",
+      "displayName": "FO2 Ronald L Carilla Jr",
+      "itemNumber": "U-13-2974",
+      "officialNameParts": {
+        "lastName": "Carilla",
+        "firstName": "Ronald Jr",
+        "middleName": "Lampa"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO2-Carilla-Jr.jpeg",
+      "designations": [
+        "CHIEF, FIRE ENGINE COMPANY",
+        "RETIREMENT SURVIVORSHIP OFFICER",
+        "DRIVER PUMP OPERATOR",
+        "PROPERTY CUSTODIAN",
+        "RAD/TEL OPERATOR",
+        "MEDICAL FIRST RESPONDER",
+        "OPERATION STAFF",
+        "FIRE SAFETY INSPECTOR",
+        "COMMUNITY EDUCATOR",
+        "FIRE PREVENTION UNIT STAFF",
+        "CUSTOMER RELATIONS OFFICER"
+      ],
+      "designationAuthority": "P.O # DSG-2025-102",
+      "educationalAttainment": "BS Nursing Graduate",
+      "eligibility": "CS FOE",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2019-07-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2041-04-03",
+      "lengthOfServiceDisplay": "6 Years 9 Months",
+      "notes": [
+        "One source omits the \"Jr\" suffix in the display name.",
+        "Promotion-related dates differ across workbook sheets and should be re-verified before final public use."
+      ]
+    },
+    {
+      "id": "mark-melvin-n-aquino",
+      "rank": "FO1",
+      "name": "Mark Melvin N Aquino",
+      "displayName": "FO1 Mark Melvin N Aquino",
+      "itemNumber": "U-14-16344",
+      "officialNameParts": {
+        "lastName": "Aquino",
+        "firstName": "Mark Melvin",
+        "middleName": "Nabong"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO1-Aquino.jpeg",
+      "designations": [
+        "FIRE PREVENTION UNIT STAFF",
+        "CUSTOMER RELATIONS OFFICER",
+        "SEARCH, RESCUE AND RETRIEVAL",
+        "LOGISTICS UNIT STAFF",
+        "OPERATION STAFF",
+        "PROPERTY INSPECTOR",
+        "HUMAN RESOURCE INFORMATION SYSTEM ADMINISTRATOR",
+        "NOZZLEMAN",
+        "FORENSIC PHOTOGRAPHER",
+        "COMMEL SHIFT B"
+      ],
+      "designationAuthority": "S.O.# AFS 2024-02-004",
+      "educationalAttainment": "BS in Information Technology",
+      "eligibility": "CS Professional",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2019-07-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2048-05-08",
+      "lengthOfServiceDisplay": "6 Years 9 Months"
+    },
+    {
+      "id": "jan-kriztoff-s-palis",
+      "rank": "FO1",
+      "name": "Jan Kriztoff S Palis",
+      "displayName": "FO1 Jan Kriztoff S Palis",
+      "itemNumber": "U-14-9259",
+      "officialNameParts": {
+        "lastName": "Palis",
+        "firstName": "Jan Kriztoff",
+        "middleName": "Sarmiento"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO1-Palis.jpeg",
+      "designations": [
+        "MEDICAL FIRST RESPONDER",
+        "CUSTOMER RELATIONS OFFICER",
+        "OLP MONITORER",
+        "DRIVER AND PUMP OPERATOR"
+      ],
+      "designationAuthority": "STATION ORDER NUMBER: 2023-12-21",
+      "educationalAttainment": "BS Nursing Graduate",
+      "eligibility": "RA 1080",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2020-10-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2048-03-01",
+      "lengthOfServiceDisplay": "5 Years 6 Months"
+    },
+    {
+      "id": "nolly-l-piso",
+      "rank": "FO1",
+      "name": "Nolly L Piso",
+      "displayName": "FO1 Nolly L Piso",
+      "itemNumber": "U-14-21438",
+      "officialNameParts": {
+        "lastName": "Piso",
+        "firstName": "Nolly",
+        "middleName": "Lucas"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO2-Piso.jpeg",
+      "designations": [
+        "DRIVER AND PUMP OPERATOR",
+        "FIRE ARSON INVESTIGATOR",
+        "FIRE INVESTIGATOR ON CASE",
+        "INTELLIGENCE OFFICER",
+        "COMMUNITY EDUCATOR",
+        "CUSTOMER RELATIONS OFFICER",
+        "LIAISON OFFICER",
+        "BUMBERO SA BARANGAY"
+      ],
+      "designationAuthority": "STATION ORDER NUMBER: 2026-01-006",
+      "educationalAttainment": "BS Criminology",
+      "eligibility": "RA 1080",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2021-07-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2053-11-29",
+      "lengthOfServiceDisplay": "4 Years 9 Months",
+      "notes": [
+        "Photo filename prefix suggests FO2 while workbook rows list FO1."
+      ]
+    },
+    {
+      "id": "melanie-g-montero",
+      "rank": "FO1",
+      "name": "Melanie G Montero",
+      "displayName": "FO1 Melanie G Montero",
+      "itemNumber": "U-14-21675",
+      "officialNameParts": {
+        "lastName": "Montero",
+        "firstName": "Melanie",
+        "middleName": "Grospe"
+      },
+      "sex": "Female",
+      "photo": "/images/mock-personnel/personnels/FO2-Montero.jpeg",
+      "designations": [
+        "CUSTOMER RELATIONS OFFICER",
+        "FIRE PREVENTION UNIT STAFF",
+        "COMMUNITY RELATIONS UNIT STAFF",
+        "RECORDS AND LEAVE MANAGEMENT UNIT STAFF",
+        "RAD/TEL OPERATOR",
+        "SUPPLY ACCOUNTABLE OFFICER",
+        "LINEWOMAN",
+        "RECORDS CUSTODIAN"
+      ],
+      "designationAuthority": "STATION ORDER NUMBER: ASING-2024-02-005",
+      "educationalAttainment": "BS Criminology",
+      "eligibility": "RA 1080",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2021-07-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2053-03-27",
+      "lengthOfServiceDisplay": "4 Years 9 Months",
+      "notes": [
+        "Photo filename prefix suggests FO2 while workbook rows list FO1."
+      ]
+    },
+    {
+      "id": "kier-benson-g-babasoro",
+      "rank": "FO1",
+      "name": "Kier Benson G Babasoro",
+      "displayName": "FO1 Kier Benson G Babasoro",
+      "itemNumber": "U-14-25342",
+      "officialNameParts": {
+        "lastName": "Babasoro",
+        "firstName": "Kier Benson",
+        "middleName": "Garcia"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO1-Babasoro.jpeg",
+      "designations": [
+        "OPERATION SECTION STAFF",
+        "LIAISON OFFICER",
+        "NOZZLEMAN",
+        "MEDICAL FIRST RESPONDER",
+        "SEARCH, RESCUE AND RETRIEVAL",
+        "FIT-SKETCH PREPARER",
+        "CUSTOMER RELATIONS OFFICER"
+      ],
+      "designationAuthority": "STATION ORDER NUMBER: 2024-11-020",
+      "educationalAttainment": "Bachelor of Science in Marine Engineering",
+      "eligibility": "CS Professional",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2023-09-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2050-01-21",
+      "lengthOfServiceDisplay": "2 Years 7 Months"
+    },
+    {
+      "id": "jefferson-c-cadaba",
+      "rank": "FO1",
+      "name": "Jefferson C Cadaba",
+      "displayName": "FO1 Jefferson C Cadaba",
+      "itemNumber": "U-14-25353",
+      "officialNameParts": {
+        "lastName": "Cadaba",
+        "firstName": "Jefferson",
+        "middleName": "Colobong"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO1-Cadaba.jpeg",
+      "designations": [
+        "LOGISTICS UNIT STAFF",
+        "CUSTOMER RELATIONS OFFICER",
+        "COMMUNITY EDUCATOR",
+        "NOZZLEMAN",
+        "MEDICAL FIRST RESPONDER",
+        "SUPPLY ACCOUNTABLE OFFICER",
+        "OPERATION SECTION STAFF"
+      ],
+      "designationAuthority": "STATION ORDER NUMBER: 2025-04-007",
+      "educationalAttainment": "Bachelor of Physical Education",
+      "eligibility": "RA 1080",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2023-09-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2052-10-15",
+      "lengthOfServiceDisplay": "2 Years 7 Months",
+      "notes": [
+        "Duty detail spells the surname as \"Cabada\" and first name as \"Jeferson\"; roster and profile sheets use \"Cadaba\" and \"Jefferson\".",
+        "Upgrading Data sheet contains an implausible retirement year for one source row, so retirement was taken from stronger or safer sources when available."
+      ]
+    },
+    {
+      "id": "jovie-jov-b-rimando",
+      "rank": "FO1",
+      "name": "Jovie Jov B Rimando",
+      "displayName": "FO1 Jovie Jov B Rimando",
+      "itemNumber": "U-14-25432",
+      "officialNameParts": {
+        "lastName": "Rimando",
+        "firstName": "Jovie Jov",
+        "middleName": "Badua"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO1-Rimando.jpeg",
+      "designations": [
+        "SUPPLY ACCOUNTABLE OFFICER",
+        "DRIVER AND PUMP OPERATOR",
+        "LOGISTICS UNIT STAFF",
+        "CUSTOMER RELATIONS OFFICER",
+        "FIRE PREVENTION UNIT STAFF",
+        "PUBLIC INFORMATION OFFICER",
+        "COMMEL",
+        "OPERATION SECTION STAFF"
+      ],
+      "designationAuthority": "STATION ORDER NUMBER: 2025-11-016",
+      "educationalAttainment": "Bachelor of Science in Accountancy",
+      "eligibility": "CS Professional / FOE",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2023-09-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": null,
+      "lengthOfServiceDisplay": "2 Years 7 Months",
+      "notes": [
+        "Upgrading Data sheet contains an implausible retirement year for one source row, so retirement was taken from stronger or safer sources when available."
+      ]
+    },
+    {
+      "id": "alvin-r-lalica",
+      "rank": "FO1",
+      "name": "Alvin R Lalica",
+      "displayName": "FO1 Alvin R Lalica",
+      "itemNumber": "U-14-14216",
+      "officialNameParts": {
+        "lastName": "Lalica",
+        "firstName": "Alvin",
+        "middleName": "Ramos"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO1-Lalica.jpeg",
+      "designations": [
+        "RECORDS AND LEAVE MANAGEMENT UNIT STAFF",
+        "PUBLIC INFORMATION OFFICER",
+        "CUSTOMER RELATIONS OFFICER",
+        "FIRE PREVENTION UNIT STAFF",
+        "LOGISTICS UNIT STAFF",
+        "LIAISON OFFICER",
+        "MEDICAL FIRST RESPONDER",
+        "NOZZLEMAN",
+        "ON FBRC TRAINING"
+      ],
+      "designationAuthority": "STATION ORDER NUMBER: 2026-03-009",
+      "educationalAttainment": "BS in Elementary Education",
+      "eligibility": "CS Professional / FOE",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2024-05-16",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2053-04-20",
+      "lengthOfServiceDisplay": "1 Years 11 Months",
+      "notes": [
+        "Personnel Profile Report lists this record as ON FBRC TRAINING while the roster sheet lists multiple duty designations."
+      ]
+    }
+  ],
+  "additionalNamesNeedingVerification": [
+    {
+      "name": "Reuben I Guindalos",
+      "seenIn": [
+        "Duty Detail April"
+      ],
+      "note": "Appears in duty detail as Shift A commander and rescue-related roles, but is not in the 19-person active roster table."
+    },
+    {
+      "name": "Rando O Dela Cruz",
+      "seenIn": [
+        "PSIPOP",
+        "Admin.docx",
+        "FSEC.docx",
+        "Operations.docx"
+      ],
+      "note": "Appears in PSIPOP and organization chart files but not in the April 2026 active roster table."
+    },
+    {
+      "name": "Cristalyn N Ilumin",
+      "seenIn": [
+        "Personnel Profile Report"
+      ],
+      "note": "Appears only in the personnel profile report among the inspected workbook sheets."
+    },
+    {
+      "name": "Marjorie Q Natividad",
+      "seenIn": [
+        "Personnel Profile Report"
+      ],
+      "note": "Appears only in the personnel profile report among the inspected workbook sheets."
+    },
+    {
+      "name": "Cesar Lloyd Latina",
+      "seenIn": [
+        "PSIPOP"
+      ],
+      "note": "Appears only in PSIPOP among the inspected workbook sheets."
+    }
+  ]
+}

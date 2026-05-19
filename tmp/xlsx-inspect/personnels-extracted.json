@@ -1,0 +1,979 @@
+{
+  "status": "public_profile_fields_extracted_from_april_2026_workbook",
+  "lastUpdated": "2026-05-17",
+  "sourceWorkbook": "/Users/johnmichaell.benito/Downloads/April Admin Monthly.xlsx",
+  "coreActiveRosterCount": 19,
+  "publicProfileRule": "This file stores public-facing personnel profile fields and excludes sensitive personal data not needed for the website.",
+  "withheldSensitiveFieldsAvailableInSource": [
+    "exact birth dates",
+    "place of birth",
+    "home addresses",
+    "cellphone numbers",
+    "TIN",
+    "religion",
+    "civil status",
+    "daily duty and off-duty schedules"
+  ],
+  "records": [
+    {
+      "id": "harry-f-carig",
+      "rank": "FINSP",
+      "name": "HARRY F CARIG",
+      "displayName": "FINSP HARRY F CARIG",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-08-0005",
+      "officialNameParts": {
+        "lastName": "CARIG",
+        "firstName": "HARRY",
+        "middleName": "FONBUENA"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/fire-marshals/FINSP-CARIG.png",
+      "designationAuthority": null,
+      "designations": [
+        "ON FOBC"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "ON FOBC",
+        "personnelProfileReport": null,
+        "uniformedProfile": "ON FOBC TRAINING",
+        "dutyDetail": null
+      },
+      "educationalAttainment": "BACHELOR OF SCIENCE IN  NURSING ",
+      "eligibility": "RA 1080 ",
+      "mandatoryTraining": "FOCC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "1997-10-01",
+      "dateLastPromotionIso": "2024-05-02",
+      "dateRetirementIso": "2029-08-23",
+      "lengthOfServiceDisplay": "28 Years and 4 Month",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP"
+      ],
+      "notes": [
+        "Roster and uniformed profile list this record as training-related rather than a regular duty designation."
+      ]
+    },
+    {
+      "id": "derrick-p-zulueta",
+      "rank": "SFO4",
+      "name": "Derrick P Zulueta",
+      "displayName": "SFO4 Derrick P Zulueta",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-08-0129",
+      "officialNameParts": {
+        "lastName": "Zulueta",
+        "firstName": "Derrick",
+        "middleName": "Pastorin"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/fire-marshals/SFO4-Zulueta.png",
+      "designationAuthority": "R.O # REA-2026-011",
+      "designations": [
+        "ACTING MUNICIPAL FIRE MARSHAL",
+        "COLLECTING OFFICER"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "ACTING MUNICIPAL FIRE MARSHAL",
+        "personnelProfileReport": "ACTING MUNICIPAL FIRE MARSHAL/ COLLECTING OFFICER",
+        "uniformedProfile": "ACTING MUNICIPAL FIRE MARSHAL",
+        "dutyDetail": "ACTING MUNICIPAL FIRE MARSHAL"
+      },
+      "educationalAttainment": "BACHELOR OF SCIENCE IN  ELECTRICAL ENGINEERING",
+      "eligibility": "RA 1080 ",
+      "mandatoryTraining": "FOCC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "1999-12-06",
+      "dateLastPromotionIso": "2022-12-19",
+      "dateRetirementIso": "2027-08-24",
+      "lengthOfServiceDisplay": "26 Years 4 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": [
+        "Upgrading Data sheet appears misaligned for this row, so date-of-birth was not trusted from that sheet."
+      ]
+    },
+    {
+      "id": "chester-bryan-a-serapion",
+      "rank": "SFO4",
+      "name": "Chester Bryan A Serapion",
+      "displayName": "SFO4 Chester Bryan A Serapion",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-09-0245",
+      "officialNameParts": {
+        "lastName": "Serapion",
+        "firstName": "Chester Bryan",
+        "middleName": "Agas"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/SFO4-Serapion.jpeg",
+      "designationAuthority": "P.O # DSG 2026-007",
+      "designations": [
+        "DEPUTY MUNICIPAL FIRE MARSHAL",
+        "CHIEF, FIRE SAFETY AND ENFORCEMENT SECTION"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "DEPUTY MUNICIPAL FIRE MARSHAL/ CHIEF, FIRE SAFETY AND ENFORCEMENT SECTION/ CHIEF, FIRE PREVENTION UNIT",
+        "personnelProfileReport": "DEPUTY MUNICIPAL FIRE MARSHAL/ CHIEF, FIRE SAFETY AND ENFORCEMENT SECTION",
+        "uniformedProfile": "DEPUTY MUNICIPAL FIRE MARSHAL/ CHIEF, FIRE SAFETY AND ENFORCEMENT SECTION/CHIEF, FIRE PREVENTION UNIT",
+        "dutyDetail": "DEPUTY MUNICIPAL FIRE MARSHAL/ CHIEF, FIRE SAFETY AND ENFORCEMENT SECTION"
+      },
+      "educationalAttainment": "BACHELOR OF SCIENCE IN  NURSING ",
+      "eligibility": "RA 1080 ",
+      "mandatoryTraining": "FPSC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "1999-12-06",
+      "dateLastPromotionIso": "2025-07-18",
+      "dateRetirementIso": "2032-04-15",
+      "lengthOfServiceDisplay": "26 Years 4 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": [
+        "Upgrading Data sheet contains an implausible retirement year for this row, so retirement was taken from stronger or safer sources when available."
+      ]
+    },
+    {
+      "id": "roselli-i-bernal",
+      "rank": "SFO1",
+      "name": "Roselli I Bernal",
+      "displayName": "SFO1 Roselli I Bernal",
+      "station": "Asingan Fire Statio",
+      "profileStatus": "active",
+      "itemNumber": "U-11-1301",
+      "officialNameParts": {
+        "lastName": "Bernal",
+        "firstName": "Roselli",
+        "middleName": "Icari"
+      },
+      "sex": "Female",
+      "photo": "/images/mock-personnel/personnels/SFO1-Bernal.jpeg",
+      "designationAuthority": "P.O  # DSG-2025-102",
+      "designations": [
+        "CHIEF, OPERATION SECTION",
+        "CHIEF, INVESTIGATION AND INTELLIGENCE UNIT",
+        "COLLECTING OFFICER",
+        "BUILDING PLAN EVALUATOR",
+        "COMMANDER SHIFT \"B",
+        "LEAD FIRE INVESTIGATOR- TEAM LEADER"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "CHIEF, OPERATIONS SECTION/COLLECTING OFFICER/CHIEF, INVESTIGATION AND INTELLIGENCE UNIT/  / BUILDING PLAN EVALUATOR/ COMMANDER SHIFT \"B\"/  LEAD FIRE INVESTIGATOR- TEAM LEADER/ CHIEF, COMMUNITY RELATIONS UNIT",
+        "personnelProfileReport": "CHIEF, OPERATION SECTION/CHIEF, INVESTIGATION AND INTELLIGENCE UNIT/ COLLECTING OFFICER/ BUILDING PLAN EVALUATOR/ COMMANDER SHIFT \"B\"/  LEAD FIRE INVESTIGATOR- TEAM LEADER",
+        "uniformedProfile": "CHIEF, OPERATION SECTION/CHIEF, INVESTIGATION AND INTELLIGENCE UNIT/ COLLECTING OFFICER/ BUILDING PLAN EVALUATOR/ COMMANDER SHIFT \"B\"/  LEAD FIRE INVESTIGATOR- TEAM LEADER/  CHIEF, COMMUNITY RELATIONS UNIT",
+        "dutyDetail": "CHIEF, OPERATIONS SECTION/COLLECTING OFFICER/ CHIEF, INVESTIGATION AND INTELLIGENCE UNIT/  BUILDING PLAN EVALUATOR/ COMMANDER SHIFT \"B\"/  LEAD FIRE INVESTIGATOR- TEAM LEADER/ CHIEF, COMMUNITY RELATIONS UNIT"
+      },
+      "educationalAttainment": "BSE Mathematics Major",
+      "eligibility": "RA 1080 ",
+      "mandatoryTraining": "FAIIC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2009-07-15",
+      "dateLastPromotionIso": "2017-12-15",
+      "dateRetirementIso": "2041-06-25",
+      "lengthOfServiceDisplay": "16 Years 9 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": []
+    },
+    {
+      "id": "michelle-p-bitantes",
+      "rank": "FO3",
+      "name": "Michelle P Bitantes",
+      "displayName": "FO3 Michelle P Bitantes",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-13-4788",
+      "officialNameParts": {
+        "lastName": "Bitantes",
+        "firstName": "Michelle",
+        "middleName": "Panagsagan"
+      },
+      "sex": "Female",
+      "photo": "/images/mock-personnel/personnels/FO3-Bintantes.jpeg",
+      "designationAuthority": "P.O. #2024-026",
+      "designations": [
+        "CHIEF, ADMINISTRATIVE SECTION",
+        "CHIEF, RECORD AND LEAVE MANAGEMENT UNIT",
+        "RECORDS CUSTODIAN",
+        "LINEWOMAN",
+        "GENDER AND DEVELOPMENT FOCALE PERSONNEL",
+        "CHIEF, PERSONNEL TRAINING UNIT"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "CHIEF, ADMINISTRATIVE SECTION/ COMMANDER SHIFT \"A\"/ CHIEF, PERSONNEL TRAINING UNIT/RECORDS CUSTODIAN / LINEWOMAN/ GENDER AND DEVELOPMENT FOCALE PERSONNEL/LEAVE PROCESSOR",
+        "personnelProfileReport": "CHIEF, ADMINISTRATIVE SECTION/ CHIEF, RECORD AND LEAVE MANAGEMENT UNIT/ RECORDS CUSTODIAN / LINEWOMAN/  GENDER AND DEVELOPMENT FOCALE PERSONNEL/ CHIEF, PERSONNEL TRAINING UNIT",
+        "uniformedProfile": "CHIEF, ADMINISTRATIVE SECTION/ CHIEF, RECORD AND LEAVE MANAGEMENT UNIT/ RECORDS CUSTODIAN / LINEWOMAN/  GENDER AND DEVELOPMENT FOCALE PERSONNEL/ CHIEF, PERSONNEL TRAINING UNIT/COMMANDER SHIFT \"B\"",
+        "dutyDetail": "CHIEF, ADMINISTRATIVE SECTION/RECORDS CUSTODIAN / GENDER AND DEVELOPMENT FOCALE PERSONNEL/ CHIEF, PERSONNEL AND TRAINING UNIT/ LINEWOMAN/ ASSESSOR/LEAVE PROCESSOR/ COMMANDER SHIFT \"A\""
+      },
+      "educationalAttainment": "BS Agricultural Education",
+      "eligibility": "RA 1080 ",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2014-11-28",
+      "dateLastPromotionIso": "2023-12-27",
+      "dateRetirementIso": "2042-12-09",
+      "lengthOfServiceDisplay": "11 Years 5 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": [
+        "Photo filename uses the spelling \"Bintantes\" while workbook records use \"Bitantes\".",
+        "Duty Detail assigns Shift A while another workbook sheet mentions Shift B; shift assignment should be re-verified before public use."
+      ]
+    },
+    {
+      "id": "wilfredo-n-oril-jr",
+      "rank": "FO2",
+      "name": "Wilfredo N Oril Jr",
+      "displayName": "FO2 Wilfredo N Oril Jr",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-13-4935",
+      "officialNameParts": {
+        "lastName": "Oril",
+        "firstName": "Wilfredo, Jr",
+        "middleName": "Niṅalga"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO2-Oril.jpeg",
+      "designationAuthority": "S.O # 2025-03-003",
+      "designations": [
+        "COLLECTING AGENT",
+        "ASSESSOR",
+        "DRIVER AND PUMP OPERATOR",
+        "CHIEF, FINANCE UNIT"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": " FIRE SAFETY INSPECTOR/CHIEF, RECORDS AND LEAVE MANAGEMENT UNIT/ DRIVER AND PUMP OPERATOR/ ASSESSOR//LEAVE PROCESOR",
+        "personnelProfileReport": "COLLECTING AGENT / ASSESSOR/ DRIVER AND PUMP OPERATOR/ CHIEF, FINANCE UNIT",
+        "uniformedProfile": "FIRE SAFETY INSPECTOR/CHIEF, RECORD AND LEAVE MANAGEMENT UNIT/ DRIVER AND PUMP OPERATOR/ASSESSOR/LEAVE PROCESSOR",
+        "dutyDetail": "FIRE SAFETY INSPECTOR/CHIEF, RECORD AND LEAVE MANAGEMENT UNIT/DRIVER AND PUMP OPERATOR/ASSESSOR/LEAVE PROCESSOR"
+      },
+      "educationalAttainment": "Bachelor of Arts in English",
+      "eligibility": "FOE",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2014-12-12",
+      "dateLastPromotionIso": "2021-12-23",
+      "dateRetirementIso": "2046-07-11",
+      "lengthOfServiceDisplay": "11 Years 2 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": []
+    },
+    {
+      "id": "ronniel-c-mariano",
+      "rank": "FO2",
+      "name": "Ronniel C Mariano",
+      "displayName": "FO2 Ronniel C Mariano",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-13-4910",
+      "officialNameParts": {
+        "lastName": "Mariano",
+        "firstName": "Ronniel",
+        "middleName": "Calamba"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO2-Mariano.jpeg",
+      "designationAuthority": "P.O. #2023-095",
+      "designations": [
+        "CHIEF, LOGISTICS UNIT",
+        "DRIVER AND PUMP OPERATOR",
+        "RECORD AND LEAVE MANAGEMENT UNIT STAFF",
+        "FIRE PREVENTION UNIT STAFF",
+        "ASSESSOR",
+        "OPERATION STAFF",
+        "OFFICER-IN-CHARGE, LOGISTICS UNIT",
+        "FIRE SAFETY INSPECTOR"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "CHIEF, LOGISTICS UNIT / FIRE SAFETY INSPECTOR / DRIVER AND PUMP OPERATOR / ASSESSOR ",
+        "personnelProfileReport": "CHIEF, LOGISTICS UNIT / DRIVER AND PUMP OPERATOR / RECORD AND LEAVE MANAGEMENT UNIT STAFF/ FIRE PREVENTION UNIT STAFF / ASSESSOR /  OPERATION STAFF /OFFICER-IN-CHARGE, LOGISTICS UNIT / FIRE SAFETY INSPECTOR / ",
+        "uniformedProfile": "CHIEF, LOGISTICS UNIT / FIRE SAFETY INSPECTOR / DRIVER AND PUMP OPERATOR / ASSESSOR ",
+        "dutyDetail": "CHIEF, LOGISTICS UNIT / FIRE SAFETY INSPECTOR / DRIVER AND PUMP OPERATOR/ASSESSOR"
+      },
+      "educationalAttainment": "BS CIVIL ENGINEERING",
+      "eligibility": "RA 1080 ",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2015-07-01",
+      "dateLastPromotionIso": "2021-12-23",
+      "dateRetirementIso": "2044-01-14",
+      "lengthOfServiceDisplay": "10 Years 9 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": []
+    },
+    {
+      "id": "john-michael-l-benito",
+      "rank": "FO2",
+      "name": "John Michael L Benito",
+      "displayName": "FO2 John Michael L Benito",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-13-4783",
+      "officialNameParts": {
+        "lastName": "Benito",
+        "firstName": "John Michael",
+        "middleName": "Laxamana"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO2-Benito.jpeg",
+      "designationAuthority": "P.O. # 2024-041",
+      "designations": [
+        "EMERGENCY MEDICAL TECHNICIAN",
+        "FIRE PREVENTION UNIT STAFF",
+        "SEARCH, RESCUE AND RETRIEVAL",
+        "FIRE SAFETY INSPECTOR",
+        "DRIVER AND PUMP OPERATOR",
+        "CUSTOMER RELATIONS OFFICER"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "CHIEF, EMERGENCY MEDICAL SERVICES / EMERGENCY MEDICAL TECHNICIAN /SEARCH, RESCUE AND RETRIEVAL / FIRE SAFETY INSPECTOR/ DRIVER AND PUMP OPERATOR / CHIEF, RESCUE UNIT",
+        "personnelProfileReport": "EMERGENCY MEDICAL TECHNICIAN / FIRE PREVENTION UNIT STAFF/SEARCH, RESCUE AND RETRIVAL / FIER SAFETY INSPECTOR/ DRIVER AND PUMP OPERATOR / CUSTOMER RELATION OFFICER",
+        "uniformedProfile": "CHIEF, EMERGENCY MEDICAL SERVICES/ EMERGENCY MEDICAL TECHNICIAN / SEARCH, RESCUE AND RETRIVAL / FIRE SAFETY INSPECTOR/ DRIVER AND PUMP OPERATOR / CHIEF, RESCUE UNIT",
+        "dutyDetail": "CHIEF, EMERGENCY MEDICAL SERVICES/ EMERGENCY MEDICAL TECHNICIAN/ SEARCH, RESCUE AND RETRIEVAL / FIRE SAFETY INSPECTOR/ DRIVER AND PUMP OPERATOR/ CHIEF, RESCUE UNIT"
+      },
+      "educationalAttainment": "BS Nursing Graduate",
+      "eligibility": "RA 1080 ",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2016-07-01",
+      "dateLastPromotionIso": "2021-12-23",
+      "dateRetirementIso": "2046-10-26",
+      "lengthOfServiceDisplay": "9 Years 9 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": []
+    },
+    {
+      "id": "jay-son-b-enriquez",
+      "rank": "FO2",
+      "name": "Jay-Son B Enriquez",
+      "displayName": "FO2 Jay-Son B Enriquez",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-13-7447",
+      "officialNameParts": {
+        "lastName": "Enriquez",
+        "firstName": "Jay-Son",
+        "middleName": "Ballesteros"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/F02-Enriquez.jpeg",
+      "designationAuthority": "Regional Order No. DSG-2025-023",
+      "designations": [
+        "SPECIAL DISBURSING OFFICER",
+        "CHIEF, FINANCE UNIT",
+        "ASSESSOR",
+        "FIRE INVESTIGATOR ON CASE",
+        "FIRE INVESTIGATION TECHNICIAN- SKETCH PREPARER"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "SPECIAL DISBURSING OFFICER/ CHIEF, FINANCE UNIT/ASSESSOR/ FIRE INVESTIGATOR ON CASE/FIRE INVESTIGATION TECHNICIAN- SKETCH PREPARER/ BUMBERO SA BARANGAY",
+        "personnelProfileReport": "SPECIAL DISBURSING OFFICER/ CHIEF, FINANCE UNIT/ASSESSOR/ FIRE INVESTIGATOR ON CASE/FIRE INVESTIGATION TECHNICIAN- SKETCH PREPARER",
+        "uniformedProfile": "SPECIAL DISBURSING OFFICER/ CHIEF, FINANCE UNIT/ASSESSOR/ FIRE INVESTIGATOR ON CASE/FIRE INVESTIGATION TECHNICIAN- SKETCH PREPARER/ BUMBERO SA BARANGAY",
+        "dutyDetail": "SPECIAL DISBURSING OFFICER /CHIEF, FINANCE UNIT/ FIRE INVESTIGATOR ON CASE/  FIRE INVESTIGATION TECHNICIAN- SKETCH PREPARER/ ASSESSOR/ BUMBERO SA BARANGAY"
+      },
+      "educationalAttainment": "BS Criminology",
+      "eligibility": "RA 1080 ",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2017-02-17",
+      "dateLastPromotionIso": "2022-07-01",
+      "dateRetirementIso": "2049-01-02",
+      "lengthOfServiceDisplay": "9 Years and 0 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": [
+        "Photo filename uses \"F02\" instead of \"FO2\"."
+      ]
+    },
+    {
+      "id": "arcille-mae-y-caras",
+      "rank": "FO2",
+      "name": "Arcille Mae Y Caras",
+      "displayName": "FO2 Arcille Mae Y Caras",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-13-1190",
+      "officialNameParts": {
+        "lastName": "Caras",
+        "firstName": "Arcille Mae",
+        "middleName": "Yabut"
+      },
+      "sex": "Female",
+      "photo": "/images/mock-personnel/personnels/FO2-Caras.jpeg",
+      "designationAuthority": null,
+      "designations": [
+        "COLLECTING AGENT",
+        "CHIEF, COMMEL",
+        "RECORDS CUSTODIAN",
+        "MEDICAL FIRST RESPONDER",
+        "CHIEF, MORALE AND WELFARE UNIT"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "COLLECTING AGENT / CHIEF, COMMEL / RECORDS CUSTODIAN/ MEDICAL FIRE RESPONDER/CHIEF, MORALE AND WELFARE UNIT    ",
+        "personnelProfileReport": null,
+        "uniformedProfile": "COLLECTING AGENT / CHIEF, COMMEL / RECORDS CUSTODIAN/ MEDICAL FIRE RESPONDER/CHIEF, MORALE AND WELFARE UNIT    ",
+        "dutyDetail": "COLLECTING AGENT / CHIEF, COMMEL / RECORDS CUSTODIAN/ MEDICAL FIRE RESPONDER/CHIEF, MORALE AND WELFARE UNIT"
+      },
+      "educationalAttainment": "BSE English Major",
+      "eligibility": "RA 1080 ",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2017-07-01",
+      "dateLastPromotionIso": "2022-12-19",
+      "dateRetirementIso": "2051-07-29",
+      "lengthOfServiceDisplay": "8 Years 9 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Duty Detail April"
+      ],
+      "notes": []
+    },
+    {
+      "id": "ronald-l-carilla-jr",
+      "rank": "FO2",
+      "name": "Ronald L Carilla Jr",
+      "displayName": "FO2 Ronald L Carilla Jr",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-13-2974",
+      "officialNameParts": {
+        "lastName": null,
+        "firstName": null,
+        "middleName": null
+      },
+      "sex": null,
+      "photo": "/images/mock-personnel/personnels/FO2-Carilla-Jr.jpeg",
+      "designationAuthority": "P.O  # DSG-2025-102",
+      "designations": [
+        "CHIEF, FIRE ENGINE COMPANY",
+        "RETIREMENT SURVIVORSHIP OFFICER",
+        "DRIVER PUMP OPERATOR",
+        "FIRE PREVENTION UNIT STAFF",
+        "PROPERTY CUSTODIAN",
+        "RADIO OPERATOR",
+        "TELEPHONE OPERATOR",
+        "MEDICAL FIRST RESPONDER",
+        "OPERATION STAFF",
+        "CUSTOMER RELATIONS OFFICER"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "CHIEF, FIRE ENGINE COMPANY/RETIREMENT SURVIVOR OFFICER/ DRIVER PUMP OPERATOR  /PROPERTY CUSTODIAN / RADIO OPERATOR/ TELEPHONE OPERATOR/ MEDICAL FIRE RESPONDER/ OPERATION STAFF/ FIRE SAFETY INSPECTOR/ COMMUNITY EDUCATOR",
+        "personnelProfileReport": "CHIEF, FIRE ENGINE COMPANY/ RETIREMENT SURVIVOR OFFICER/DRIVER PUMP OPERATOR  / FIRE PREVENTION UNIT STAFF  /  PROPERTY CUSTODIAN /RADIO OPERATOR/ TELEPHONE OPERATOR/ MEDICAL FIRE RESPONDER / OPERATION STAFF/ CUSTOMER RELATION OFFICER / ",
+        "uniformedProfile": null,
+        "dutyDetail": "CHIEF, FIRE ENGINE COMPANY/RETIREMENT SURVIVOR OFFICER/DRIVER PUMP OPERATOR/ RAD/TEL  OPERATOR/ MEDICAL FIRST RESPONDER / OPERATION STAFF/ FIRE SAFETINSPECTOR/ COMMUNITY EDUCATOR"
+      },
+      "educationalAttainment": "BACHELOR OF SCIENCE IN NURSING",
+      "eligibility": "CS FOE",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2019-07-01",
+      "dateLastPromotionIso": "2023-09-16",
+      "dateRetirementIso": null,
+      "lengthOfServiceDisplay": null,
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": [
+        "One source omits the \"Jr\" suffix in the display name."
+      ]
+    },
+    {
+      "id": "mark-melvin-n-aquino",
+      "rank": "FO1",
+      "name": "Mark Melvin N Aquino",
+      "displayName": "FO1 Mark Melvin N Aquino",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-14-16344",
+      "officialNameParts": {
+        "lastName": "Aquino",
+        "firstName": "Mark Melvin",
+        "middleName": "Nabong"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO1-Aquino.jpeg",
+      "designationAuthority": "S.O.# AFS 2024-02-004",
+      "designations": [
+        "FIRE PREVENTION UNIT STAFF",
+        "CUSTOMER RELATIONS OFFICER",
+        "SEARCH, RESCUE AND RETRIEVAL",
+        "LOGISTICS UNIT STAFF",
+        "OPERATION STAFF",
+        "PROPERTY INSPECTOR",
+        "HUMAN RESOURCE INFORMATION SYSTEM ADMINISTRATOR",
+        "NOZZLEMAN",
+        "FORENSIC PHOTOGRAPHER"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "FIRE PREVENTION UNIT STAFF / SEARCH, RESCUE AND RETRIEVAL/ LOGISTICS UNIT STAFF/ OPERATION STAFF/ PROPERTY INSPECTOR/ HUMAN RESOURCE INFORMATION SYSTEM ADMINISTRATOR/ NOZZLEMAN/ COMMEL SHIFT \"B\"/ FORENSIC PHOTOGRAPHER",
+        "personnelProfileReport": "FIRE PREVENTION UNIT STAFF/ CUSTOMER RELATION OFFICER/ SEARCH, RESCUE AND RETRIEVAL/ LOGISTICS UNIT STAFF/ OPERATION STAFF/ PROPERTY INSPECTOR/ HUMAN RESOURCE INFORMATION SYSTEM ADMINISTRATOR/ NOZZLEMAN/ FORENSIC PHOTOGRAPHER",
+        "uniformedProfile": "FIRE PREVENTION UNIT STAFF/ CUSTOMER RELATION OFFICER/ SEARCH, RESCUE AND RETRIEVAL/ LOGISTICS UNIT STAFF/ OPERATION STAFF/ PROPERTY INSPECTOR/ HUMAN RESOURCE INFORMATION SYSTEM ADMINISTRATOR/ NOZZLEMAN/ FORENSIC PHOTOGRAPHER",
+        "dutyDetail": "FIRE PREVENTION UNIT STAFF / CUSTOMER RELATION OFFICER/ SEARCH, RESCUE AND RETRIEVAL/ LOGISTICS UNIT STAFF/ OPERATION STAFF/ PROPERTY INSPECTOR/HUMAN RESOURCE INFORMATION SYSTEM ADMINISTRATOR/ NOZZLEMAN/FORENSIC PHOTOGRAPHER"
+      },
+      "educationalAttainment": "BS in Information Technology",
+      "eligibility": "CS Professional",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2019-07-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2048-05-08",
+      "lengthOfServiceDisplay": "6 Years 9 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": []
+    },
+    {
+      "id": "jan-kriztoff-s-palis",
+      "rank": "FO1",
+      "name": "Jan Kriztoff S Palis",
+      "displayName": "FO1 Jan Kriztoff S Palis",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-14-9259",
+      "officialNameParts": {
+        "lastName": "Palis",
+        "firstName": "Jan Kriztoff",
+        "middleName": "Sarmiento"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO1-Palis.jpeg",
+      "designationAuthority": "STATION ORDER NUMBER:\n 2023-12-21",
+      "designations": [
+        "DRIVER AND PUMP OPERATOR",
+        "MEDICAL FIRST RESPONDER",
+        "CUSTOMER RELATIONS OFFICER",
+        "OLP MONITORER"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "MEDICAL FIRST RESPONDER/ CUSTOMER RELATION OFFICER/ OLP MONITORER/DRIVER AND PUMP OPERATOR",
+        "personnelProfileReport": "DRIVER AND PUMP OPERATOR/ MEDICAL FIRE RESPONDER/ CUSTOMER RELATION OFFICER/ OLP MONITORER",
+        "uniformedProfile": "MEDICAL FIRE RESPONDER/ CUSTOMER RELATION OFFICER/ OLP MONITORER",
+        "dutyDetail": "MEDICAL FIRST RESPONDER/CUSTOMER RELATION OFFICER/ OLP MONITORER/DRIVER AND PUMP OPERATOR"
+      },
+      "educationalAttainment": "BS Nursing Graduate",
+      "eligibility": "RA 1080 ",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2020-10-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2048-03-01",
+      "lengthOfServiceDisplay": "5 Years 6 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": []
+    },
+    {
+      "id": "nolly-l-piso",
+      "rank": "FO1",
+      "name": "Nolly L Piso",
+      "displayName": "FO1 Nolly L Piso",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-14-21438",
+      "officialNameParts": {
+        "lastName": "Piso",
+        "firstName": "Nolly",
+        "middleName": "Lucas"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO2-Piso.jpeg",
+      "designationAuthority": "STATION ORDER NUMBER:\n 2026-01-006",
+      "designations": [
+        "DRIVER AND PUMP OPERATOR",
+        "FIRE ARSON INVESTIGATOR",
+        "FIRE INVESTIGATOR ON CASE",
+        "INTELLIGENCE OFFICER",
+        "COMMUNITY EDUCATOR",
+        "CUSTOMER RELATIONS OFFICER",
+        "LIAISON OFFICER"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "DRIVER AND PUMP OPERATOR/FIRE ARSON INVESTIGATOR /FIRE INVESTIGATOR ON CASE/ INTELLIGENCE OFFICER/ COMMUNITY EDUCATOR/ CUSTOMER RELATION OFFICER/ LIAISON OFFICER/ BUMBERO SA BARANGAY",
+        "personnelProfileReport": "DRIVER AND PUMP OPERATOR/FIRE ARSON INVESTIGATOR /FIRE INVESTIGATOR ON CASE/ INTELLIGENCE OFFICER/ COMMUNITY EDUCATOR/ CUSTOMER RELATION OFFICER/ LIAISON OFFICER",
+        "uniformedProfile": "DRIVER AND PUMP OPERATOR/FIRE ARSON INVESTIGATOR /FIRE INVESTIGATOR ON CASE/ INTELLIGENCE OFFICER/ COMMUNITY EDUCATOR/ CUSTOMER RELATION OFFICER/ LIAISON OFFICER/BUMBERO SA BARANGAY",
+        "dutyDetail": "DRIVER AND PUMP OPERATOR/FIRE ARSON INVESTIGATOR /FIRE INVESTIGATOR ON CASE/ INTELLIGENCE OFFICER/ COMMUNITY EDUCATOR/ CUSTOMER RELATION OFFICER/ LIAISON OFFICER/ BUMBERO SA BARANGAY"
+      },
+      "educationalAttainment": "BS Criminology",
+      "eligibility": "RA 1080 ",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2021-07-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2053-11-29",
+      "lengthOfServiceDisplay": "4 Years 9 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": [
+        "Photo filename prefix suggests FO2 while workbook rows list FO1."
+      ]
+    },
+    {
+      "id": "melanie-g-montero",
+      "rank": "FO1",
+      "name": "Melanie G Montero",
+      "displayName": "FO1 Melanie G Montero",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-14-21675",
+      "officialNameParts": {
+        "lastName": "Montero",
+        "firstName": "Melanie",
+        "middleName": "Grospe"
+      },
+      "sex": "Female",
+      "photo": "/images/mock-personnel/personnels/FO2-Montero.jpeg",
+      "designationAuthority": "STATION ORDER NUMBER:\nASING-2024-02-005",
+      "designations": [
+        "SUPPLY ACCOUNTABLE OFFICER",
+        "FIRE PREVENTION UNIT STAFF",
+        "COMMUNITY RELATIONS UNIT STAFF",
+        "RECORDS AND LEAVE MANAGEMENT UNIT STAFF",
+        "CUSTOMER RELATIONS OFFICER"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "CUSTOMER RELATION OFFICER/FIRE PREVENTION UNIT STAFF/ COMMUNITY RELATION UNIT STAFF/ RECORDS AND LEAVE MANAGEMENT UNIT STAFF/ RAD/TEL OPERATOR",
+        "personnelProfileReport": "SUPPLY ACCOUNTABLE OFFICER/FIRE PREVENTION UNIT STAFF/COMMUNITY RELATION UNIT STAFF/RECORDS AND LEAVE MANAGEMENT UNIT STAFF/CUSTOMER RELATION OFFICER",
+        "uniformedProfile": " CUSTOMER RELATION OFFICER/FIRE PREVENTION UNIT STAFF/ COMMUNITY RELATION UNIT STAFF/ RECORDS AND LEAVE MANAGEMENT UNIT STAFF",
+        "dutyDetail": "CUSTOMER RELATION OFFICER/FIRE PREVENTION UNIT STAFF/ LINEWOMAN/ RECORDS CUSTODIAN/RECORDS AND LEAVE MANAGEMENT UNIT STAFF"
+      },
+      "educationalAttainment": "BS Criminology",
+      "eligibility": "RA 1080 ",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2021-07-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2053-03-27",
+      "lengthOfServiceDisplay": "4 Years 9 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": [
+        "Photo filename prefix suggests FO2 while workbook rows list FO1."
+      ]
+    },
+    {
+      "id": "kier-benson-g-babasoro",
+      "rank": "FO1",
+      "name": "Kier Benson G Babasoro",
+      "displayName": "FO1 Kier Benson G Babasoro",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-14-25342",
+      "officialNameParts": {
+        "lastName": "Babasoro",
+        "firstName": "Kier Benson",
+        "middleName": "Garcia"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO1-Babasoro.jpeg",
+      "designationAuthority": "STATION ORDER \nNUMBER: 2024-11-020\n",
+      "designations": [
+        "OPERATION SECTION STAFF",
+        "LIAISON OFFICER",
+        "NOZZLEMAN",
+        "MEDICAL FIRST RESPONDER",
+        "SEARCH, RESCUE AND RETRIEVAL",
+        "FIT-SKETCH PREPARER",
+        "CUSTOMER RELATIONS OFFICER"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "OPERATION SECTION STAFF/ LIAISON OFFICER/NOZZLEMAN/MEDICAL FIRST RESPONDER/SEARCH, RESCUE AND RETRIEVAL/FIT-SKETCH PREPARER/CUSTOMER RELATIONS OFFICER",
+        "personnelProfileReport": "OPERATION SECTION STAFF/ LIAISON OFFICER/NOZZLEMAN/MEDICAL FIRST RESPONDER/SEARCH, RESCUE AND RETRIEVAL/FIT-SKETCH PREPARER/ CUSTOMER RELATION OFFICER",
+        "uniformedProfile": "OPERATION SECTION STAFF/ LIAISON OFFICER/NOZZLEMAN/MEDICAL FIRST RESPONDER/SEARCH, RESCUE AND RETRIEVAL/FIT-SKETCH PREPARER/ CUSTOMER RELATIONS OFFICER",
+        "dutyDetail": "OPERATION SECTION STAFF/ LIAISON OFFICER/NOZZLEMAN/MEDICAL FIRST RESPONDER/SEARCH, RESCUE AND RETRIEVAL/FIT-SKETCH PREPARER/CUSTOMER RELATION OFFICER"
+      },
+      "educationalAttainment": "BACHELOR OF SCIENCE IN MARINE ENGINEERING",
+      "eligibility": "CS Professional",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2023-09-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2050-01-21",
+      "lengthOfServiceDisplay": "2 Years 7 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": []
+    },
+    {
+      "id": "jefferson-c-cadaba",
+      "rank": "FO1",
+      "name": "Jefferson C Cadaba",
+      "displayName": "FO1 Jefferson C Cadaba",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-14-25353",
+      "officialNameParts": {
+        "lastName": "Cadaba",
+        "firstName": "Jefferson",
+        "middleName": "Colobong"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO1-Cadaba.jpeg",
+      "designationAuthority": "STATION ORDER NUMBER:\n 2025-04-007",
+      "designations": [
+        "SUPPLY ACCOUNTABLE OFFICER",
+        "LOGISTICS UNIT STAFF",
+        "CUSTOMER RELATIONS OFFICER",
+        "COMMUNITY EDUCATOR",
+        "NOZZLEMAN",
+        "MEDICAL FIRST RESPONDER"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "LOGISTICS UNIT STAFF/ /CUSTOMER RELATIONS OFFICER/ COMMUNITY EDUCATOR/ NOZZLEMAN/ MEDICAL FIRST RESPONDER",
+        "personnelProfileReport": "SUPPLY ACCOUNTABLE OFFICER/ LOGISTICS UNIT STAFF/CUSTOMER RELATION OFFICER/ COMMUNITY EDUCATOR/ NOZZLEMAN/ MEDICAL FIRST RESPONDER",
+        "uniformedProfile": "LOGISTICS UNIT STAFF/ /CUSTOMER RELATION OFFICER/ COMMUNITY EDUCATOR/ NOZZLEMAN/ MEDICAL FIRST RESPONDER",
+        "dutyDetail": "LOGISTICS UNIT STAFF/ CUSTOMER RELATIONS OFFICER/ COMMUNITY EDUCATOR/NOZZLEMAN/MEDICAL FIRST RESPONDER/OPERATION SECTION STAFF"
+      },
+      "educationalAttainment": "BACHELOR OF PHYSICAL EDUCATION",
+      "eligibility": "RA 1080 ",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2023-09-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2052-10-15",
+      "lengthOfServiceDisplay": "2 Years 7 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": [
+        "Duty detail spells the surname as \"Cabada\" and first name as \"Jeferson\"; roster and profile sheets use \"Cadaba\" and \"Jefferson\".",
+        "Upgrading Data sheet contains an implausible retirement year for this row, so retirement was taken from stronger or safer sources when available."
+      ]
+    },
+    {
+      "id": "jovie-jov-b-rimando",
+      "rank": "FO1",
+      "name": "Jovie Jov B Rimando",
+      "displayName": "FO1 Jovie Jov B Rimando",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-14-25432",
+      "officialNameParts": {
+        "lastName": "Rimando",
+        "firstName": "Jovie Jov",
+        "middleName": "Badua"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO1-Rimando.jpeg",
+      "designationAuthority": "STATION ORDER NUMBER:\n 2025-11-016",
+      "designations": [
+        "SUPPLY ACCOUNTABLE OFFICER",
+        "DRIVER AND PUMP OPERATOR",
+        "LOGISTICS UNIT STAFF",
+        "CUSTOMER RELATIONS OFFICER",
+        "FIRE PREVENTION UNIT STAFF",
+        "PUBLIC INFORMATION OFFICER",
+        "COMMEL"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": "SUPPLY ACCOUNTABLE OFFICER/ DRIVER AND PUMP OPERATOR/LOGISTICS UNIT STAFF/ CUSTOMER RELATIONS OFFICER/ FIRE PREVENTION UNIT STAFF/ PUBLIC INFORMATION OFFICER/COMMEL",
+        "personnelProfileReport": null,
+        "uniformedProfile": "SUPPLY ACCOUNTABLE OFFICER/ DRIVER AND PUMP OPERATOR/LOGISTICS UNIT STAFF/ CUSTOMER RELATIONS OFFICER/ FIRE PREVENTION UNIT STAFF/ PUBLIC INFORMATION OFFICER/COMMEL",
+        "dutyDetail": "SUPPLY ACCOUNTABLE OFFICER/DRIVER AND PUMP OPERATOR/LOGISTICS UNIT STAFF/CUSTOMER RELATIONS OFFICER/ OPN SEC STAFF/FIRE PREVENTION UNIT STAFF/PUBLIC INFORMATION OFFICER/COMMEL"
+      },
+      "educationalAttainment": "BACHELOR OF SCIENCE IN ACCOUNTANCY",
+      "eligibility": "CS Professional/ FOE",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2023-09-01",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": null,
+      "lengthOfServiceDisplay": "2 Years 7 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": [
+        "Upgrading Data sheet contains an implausible retirement year for this row, so retirement was taken from stronger or safer sources when available."
+      ]
+    },
+    {
+      "id": "alvin-r-lalica",
+      "rank": "FO1",
+      "name": "Alvin R Lalica",
+      "displayName": "FO1 Alvin R Lalica",
+      "station": "Asingan Fire Station",
+      "profileStatus": "active",
+      "itemNumber": "U-14-14216",
+      "officialNameParts": {
+        "lastName": "Lalica",
+        "firstName": "Alvin",
+        "middleName": "Ramos"
+      },
+      "sex": "Male",
+      "photo": "/images/mock-personnel/personnels/FO1-Lalica.jpeg",
+      "designationAuthority": "STATION ORDER NUMBER: 2026-03-009",
+      "designations": [
+        "ON FBRC TRAINING"
+      ],
+      "designationSourceVariants": {
+        "rosterOfTroops": " RECORDS AND LEAVE MANAGEMENT UNIT STAFF/PUBLIC INFORMATION OFFICER/ CUSTOMER RELATIONS OFFICER/FIRE PREVENTION UNIT STAFF/ LOGISTICS UNIT STAFF/LIAISON OFFICER/ MEDICAL FIRST RESPONDER/ NOZZLEMAN",
+        "personnelProfileReport": "ON FBRC TRAINING",
+        "uniformedProfile": " RECORDS AND LEAVE MANAGEMENT UNIT STAFF/PUBLIC INFORMATION OFFICER/ CUSTOMER RELATIONS OFFICER/FIRE PREVENTION UNIT STAFF/ LOGISTICS UNIT STAFF/LIAISON OFFICER/ MEDICAL FIRST RESPONDER/ NOZZLEMAN",
+        "dutyDetail": "RECORDS AND LEAVE MANAGEMENT UNIT STAFF/PUBLIC INFORMATION OFFICER/ CUSTOMER RELATIONS OFFICER/FIRE PREVENTION UNIT STAFF/ LOGISTICS UNIT STAFF/LIAISON OFFICER/ MEDICAL FIRST RESPONDER/ NOZZLEMAN"
+      },
+      "educationalAttainment": "BS in Elementary Education",
+      "eligibility": "CS Professional/ FOE",
+      "mandatoryTraining": "FBRC",
+      "statusOfAppointment": "Permanent",
+      "dateEnteredServiceIso": "2024-05-16",
+      "dateLastPromotionIso": null,
+      "dateRetirementIso": "2053-04-20",
+      "lengthOfServiceDisplay": "1 Years 11 Months",
+      "sourceSheets": [
+        "BFP Roster of Troops",
+        "Upgrading Data of BFP Pers",
+        "Profile of BFP Uniformed Pers",
+        "PSIPOP",
+        "Personnel Profile Report",
+        "Duty Detail April"
+      ],
+      "notes": [
+        "Personnel Profile Report lists this record as ON FBRC TRAINING while the roster sheet lists multiple duty designations."
+      ]
+    }
+  ],
+  "additionalNamesNeedingVerification": [
+    {
+      "name": "Reuben I Guindalos",
+      "seenIn": [
+        "Duty Detail April"
+      ],
+      "note": "Appears in duty detail as Shift A commander and rescue-related roles, but is not in the 19-person active roster table."
+    },
+    {
+      "name": "Rando O Dela Cruz",
+      "seenIn": [
+        "PSIPOP",
+        "Admin.docx",
+        "FSEC.docx",
+        "Operations.docx"
+      ],
+      "note": "Appears in PSIPOP and organization chart files but not in the April 2026 active roster table."
+    },
+    {
+      "name": "Cristalyn N Ilumin",
+      "seenIn": [
+        "Personnel Profile Report"
+      ],
+      "note": "Appears only in the personnel profile report among the inspected workbook sheets."
+    },
+    {
+      "name": "Marjorie Q Natividad",
+      "seenIn": [
+        "Personnel Profile Report"
+      ],
+      "note": "Appears only in the personnel profile report among the inspected workbook sheets."
+    },
+    {
+      "name": "Cesar Lloyd Latina",
+      "seenIn": [
+        "PSIPOP"
+      ],
+      "note": "Appears only in PSIPOP among the inspected workbook sheets."
+    }
+  ]
+}

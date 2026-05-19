@@ -1,0 +1,357 @@
+{
+  "status": "role_structure_documented_assignment_model_ready",
+  "lastUpdated": "2026-05-17",
+  "verificationStatus": "positions_and_units_confirmed_from_user_provided_org_charts",
+  "sourceRefs": [
+    "/Users/johnmichaell.benito/Downloads/Admin.docx",
+    "/Users/johnmichaell.benito/Downloads/FSEC.docx",
+    "/Users/johnmichaell.benito/Downloads/Operations.docx",
+    "data/fire-marshals.json",
+    "docs/FIRE_MARSHALS.md"
+  ],
+  "assignmentDataRef": "data/personnel-assignments.json",
+  "notes": [
+    "Do not invent the organization structure.",
+    "Use only confirmed public-facing roles, offices, or functional groups.",
+    "Named subordinate personnel should be added only if confirmed for publication.",
+    "Section and position structure comes from user-provided organization chart documents.",
+    "Personnel names appearing in the source charts are outdated and should not be treated as current assignments.",
+    "This file should store role slots and unit structure, not the current assignee names.",
+    "When a person leaves a role, update only the assignment layer and keep the outgoing person in archive instead of rewriting the structure."
+  ],
+  "assignmentModel": {
+    "structureLayer": "This file stores the stable organization structure and role IDs.",
+    "assignmentLayer": "data/personnel-assignments.json stores the current assignee per role and the assignment archive.",
+    "archiveRule": "When a role changes hands, move the old assignment to the archive and add the replacement under the same roleId.",
+    "archivePreservationRule": "Former assignees should remain preserved in the assignment archive even if the website later chooses not to display the archive publicly.",
+    "personnelDirectoryRule": "Do not delete former personnel profiles when they are replaced. Keep them in data/personnels.json and let the assignment layer decide whether they are current or archived in the org chart."
+  },
+  "stationHeadRole": {
+    "roleId": "head-of-station-fire-marshal",
+    "title": "Head of Station / Fire Marshal"
+  },
+  "acronymGlossary": [
+    {
+      "acronym": "SDO",
+      "label": "Special Disbursing Officer"
+    },
+    {
+      "acronym": "RSO",
+      "label": "Retiree Survivorship Officer"
+    },
+    {
+      "acronym": "SAO",
+      "label": "Supply Accountable Officer"
+    },
+    {
+      "acronym": "MFR",
+      "label": "Medical First Responder"
+    },
+    {
+      "acronym": "SRR",
+      "label": "Search Rescue Retrieval"
+    },
+    {
+      "acronym": "DPO",
+      "label": "Driver and Pump Operator"
+    }
+  ],
+  "termNotes": [
+    "COMMEL appears in the source chart as a unit label and still needs preferred public expansion confirmation.",
+    "IIU appears in the source chart as a unit label and still needs preferred public expansion confirmation.",
+    "The second shift box in Operations.docx should be read as Shift B based on direct user clarification."
+  ],
+  "groups": [
+    {
+      "id": "administrative-section",
+      "name": "Administrative Section",
+      "type": "section",
+      "leadRoleId": "administrative-section-chief",
+      "leadTitle": "Chief, Administrative Section",
+      "structureSource": "Admin.docx",
+      "children": [
+        {
+          "id": "personnel-training-unit",
+          "name": "Personnel Training Unit",
+          "type": "unit",
+          "leadRoleId": "personnel-training-unit-chief",
+          "leadTitle": "Chief, Personnel Training Unit",
+          "roles": []
+        },
+        {
+          "id": "records-and-leave-management-unit",
+          "name": "Records and Leave Management Unit",
+          "type": "unit",
+          "leadRoleId": "records-and-leave-management-unit-chief",
+          "leadTitle": "Chief, Records and Leave Management Unit",
+          "roles": [
+            {
+              "id": "records-custodian",
+              "title": "Records Custodian"
+            },
+            {
+              "id": "retiree-survivorship-officer",
+              "title": "Retiree Survivorship Officer",
+              "acronym": "RSO"
+            },
+            {
+              "id": "records-and-leave-management-unit-staff",
+              "title": "Records and Leave Management Unit Staff"
+            }
+          ]
+        },
+        {
+          "id": "morale-and-welfare-unit",
+          "name": "Morale and Welfare Unit",
+          "type": "unit",
+          "leadRoleId": "morale-and-welfare-unit-chief",
+          "leadTitle": "Chief, Morale and Welfare Unit",
+          "roles": []
+        },
+        {
+          "id": "finance-unit",
+          "name": "Finance Unit",
+          "type": "unit",
+          "leadRoleId": "finance-unit-chief",
+          "leadTitle": "Chief, Finance Unit",
+          "roles": [
+            {
+              "id": "collecting-agent",
+              "title": "Collecting Agent"
+            },
+            {
+              "id": "special-disbursing-officer",
+              "title": "Special Disbursing Officer",
+              "acronym": "SDO"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fire-safety-enforcement-section",
+      "name": "Fire Safety Enforcement Section",
+      "type": "section",
+      "leadRoleId": "fire-safety-enforcement-section-chief",
+      "leadTitle": "Chief, Fire Safety and Enforcement Section",
+      "structureSource": "FSEC.docx",
+      "children": [
+        {
+          "id": "community-relations-unit",
+          "name": "Community Relations Unit",
+          "type": "unit",
+          "leadRoleId": "community-relations-unit-chief",
+          "leadTitle": "Chief, Community Relations Unit",
+          "roles": [
+            {
+              "id": "customer-relations-officer",
+              "title": "Customer Relations Officer"
+            },
+            {
+              "id": "community-relations-unit-staff",
+              "title": "Community Relations Unit Staff"
+            }
+          ]
+        },
+        {
+          "id": "fire-prevention-unit",
+          "name": "Fire Prevention Unit",
+          "type": "unit",
+          "leadRoleId": "fire-prevention-unit-chief",
+          "leadTitle": "Chief, Fire Prevention Unit",
+          "roles": [
+            {
+              "id": "fire-safety-inspector",
+              "title": "Fire Safety Inspector"
+            },
+            {
+              "id": "building-plan-evaluator",
+              "title": "Building Plan Evaluator"
+            },
+            {
+              "id": "assessor",
+              "title": "Assessor"
+            },
+            {
+              "id": "fire-prevention-unit-staff",
+              "title": "Fire Prevention Unit Staff"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operations-section",
+      "name": "Operations Section",
+      "type": "section",
+      "leadRoleId": "operations-section-chief",
+      "leadTitle": "Chief, Operation Section",
+      "structureSource": "Operations.docx",
+      "children": [
+        {
+          "id": "commel",
+          "name": "Commel",
+          "type": "unit",
+          "leadRoleId": "commel-chief",
+          "leadTitle": "Chief, Commel",
+          "roles": [
+            {
+              "id": "rad-tel-operator",
+              "title": "Rad/Tel Operator"
+            }
+          ]
+        },
+        {
+          "id": "iiu",
+          "name": "IIU",
+          "type": "unit",
+          "leadRoleId": "iiu-chief",
+          "leadTitle": "Chief, IIU",
+          "roles": [
+            {
+              "id": "lead-fire-investigator-team-leader",
+              "title": "Lead Fire Investigator-TL"
+            },
+            {
+              "id": "fire-investigator-on-case",
+              "title": "Fire Investigator on Case"
+            },
+            {
+              "id": "evidence-recovery-evidence-custodian",
+              "title": "Evidence Recovery / Evidence Custodian"
+            },
+            {
+              "id": "sketch-preparer",
+              "title": "Sketch Preparer"
+            },
+            {
+              "id": "forensic-photographer",
+              "title": "Forensic Photographer"
+            }
+          ]
+        },
+        {
+          "id": "ems",
+          "name": "EMS",
+          "type": "unit",
+          "leadRoleId": "ems-chief",
+          "leadTitle": "Chief, EMS",
+          "roles": [
+            {
+              "id": "emt",
+              "title": "EMT"
+            },
+            {
+              "id": "medical-first-responder",
+              "title": "Medical First Responder",
+              "acronym": "MFR"
+            }
+          ]
+        },
+        {
+          "id": "rescue-unit",
+          "name": "Rescue Unit",
+          "type": "unit",
+          "leadRoleId": "rescue-unit-chief",
+          "leadTitle": "Chief, Rescue Unit",
+          "roles": [
+            {
+              "id": "search-rescue-retrieval",
+              "title": "Search Rescue Retrieval",
+              "acronym": "SRR"
+            }
+          ]
+        },
+        {
+          "id": "logistics-unit",
+          "name": "Logistics Unit",
+          "type": "unit",
+          "leadRoleId": "logistics-unit-chief",
+          "leadTitle": "Chief, Logistics Unit",
+          "roles": [
+            {
+              "id": "supply-accountable-officer",
+              "title": "Supply Accountable Officer",
+              "acronym": "SAO"
+            },
+            {
+              "id": "property-custodian",
+              "title": "Property Custodian"
+            },
+            {
+              "id": "logistics-unit-staff",
+              "title": "Logistics Unit Staff"
+            }
+          ]
+        },
+        {
+          "id": "fire-engine-company",
+          "name": "Fire Engine Company",
+          "type": "unit",
+          "leadRoleId": "fire-engine-company-chief",
+          "leadTitle": "Chief, Fire Engine Company",
+          "children": [
+            {
+              "id": "shift-a",
+              "name": "Shift A",
+              "type": "team",
+              "leadRoleId": "shift-a-commander",
+              "roles": [
+                {
+                  "id": "shift-a-commander",
+                  "title": "Shift A Commander"
+                },
+                {
+                  "id": "shift-a-dpo",
+                  "title": "DPO"
+                },
+                {
+                  "id": "shift-a-dpo-nozzleman",
+                  "title": "DPO / Nozzleman"
+                },
+                {
+                  "id": "shift-a-linewoman",
+                  "title": "Linewoman"
+                },
+                {
+                  "id": "shift-a-nozzleman",
+                  "title": "Nozzleman"
+                }
+              ]
+            },
+            {
+              "id": "shift-b",
+              "name": "Shift B",
+              "type": "team",
+              "leadRoleId": "shift-b-commander",
+              "sourceNote": "Shift B label follows user clarification that corrected the chart typo.",
+              "roles": [
+                {
+                  "id": "shift-b-commander",
+                  "title": "Shift B Commander"
+                },
+                {
+                  "id": "shift-b-dpo",
+                  "title": "DPO"
+                },
+                {
+                  "id": "shift-b-nozzleman",
+                  "title": "Nozzleman"
+                },
+                {
+                  "id": "shift-b-lineman-nozzleman",
+                  "title": "Lineman / Nozzleman"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pendingQuestions": [
+    "What is the preferred public expansion or display label for COMMEL?",
+    "What is the preferred public expansion or display label for IIU?",
+    "Which workbook-derived role assignments should be treated as final when multiple names overlap on the same lead role?"
+  ]
+}

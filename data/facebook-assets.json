@@ -1,0 +1,19 @@
+{
+  "pageName": "Bfp RegionOne Asingan Pangasinan",
+  "officialPageUrl": "https://www.facebook.com/bfp.asingan",
+  "photosTabUrl": "https://www.facebook.com/bfp.asingan/photos",
+  "publicPhotoLinks": [
+    "https://www.facebook.com/photo/?fbid=6542687525825863&set=a.248008535293825",
+    "https://www.facebook.com/photo/?fbid=5113624305398866&set=a.108571615904185&__tn__=%3C"
+  ],
+  "profileImageUrl": "https://scontent.fmnl25-4.fna.fbcdn.net/v/t39.30808-1/279482900_5113624275398869_6450850557052016082_n.jpg?stp=dst-jpg_tt6&cstp=mx553x557&ctp=s553x557&_nc_cat=100&ccb=1-7&_nc_sid=3ab345&_nc_ohc=a64HMwDOiDIQ7kNvwF17XxH&_nc_oc=AdqmB8TBbhPa6G9tNxDyA1Bnr5ke-sS5sYKu4TIqQMuNS9iAayT-CufjcPE4eeaK8Bg&_nc_zt=24&_nc_ht=scontent.fmnl25-4.fna&_nc_gid=uZyo6mDPnBDvw6U9sU_mWA&_nc_ss=7020f&oh=00_Af7ngO9YoBwfqzjpbeo2AlwITN4bJ1mHqL_x2v592XfxCQ&oe=6A0ED9E5",
+  "notes": [
+    "These links were captured from the public Facebook page on May 17, 2026 using browser automation.",
+    "The public logged-out page exposed a limited set of visible photo links without requiring login.",
+    "Direct image CDN URLs from Facebook may expire over time, so the official page and photos tab should be treated as the most stable source references."
+  ],
+  "branding": {
+    "newLogo": "/images/branding/Asingan-fs-new-logo.jpeg",
+    "oldLogo": "/images/branding/Asingan-fs-old-logo.jpg"
+  }
+}

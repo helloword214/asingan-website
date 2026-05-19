@@ -1,0 +1,138 @@
+[
+  {
+    "id": "hino-fire-truck",
+    "name": "HINO FIRE TRUCK",
+    "type": "Fire Truck",
+    "description": null,
+    "capacityDisplay": "1000 Gallons",
+    "capacityGallons": 1000,
+    "plateNumber": null,
+    "plateDisplay": "No Available Plate",
+    "dateAcquiredDisplay": "09 December 2022",
+    "dateAcquiredIso": "2022-12-09",
+    "registrationStatus": null,
+    "engineNumber": null,
+    "chassisNumber": null,
+    "stationHeadAtAcquisition": "FINSP ROGELIO S QUIZON JR",
+    "mayorAtAcquisition": "Carlos F. Lopez Jr.",
+    "image": "/images/mock-assets/Hino-firetruck.png",
+    "sourceDocument": "/Users/johnmichaell.benito/Downloads/HINO PERSPECTIVE.docx",
+    "notes": [
+      "Based on current station account, this fire truck belongs to the period of FINSP ROGELIO S QUIZON JR.",
+      "Based on current station account, this fire truck was acquired during the administration of Mayor Carlos F. Lopez Jr."
+    ]
+  },
+  {
+    "id": "isuzu-morita",
+    "name": "ISUZU MORITA",
+    "type": "Fire Truck",
+    "description": "A vintage and long-serving fire truck that remains a point of pride for Asingan because it is still operational.",
+    "capacityDisplay": "1000 Gallons",
+    "capacityGallons": 1000,
+    "plateNumber": "SEC 820",
+    "plateDisplay": "SEC 820",
+    "dateAcquiredDisplay": "August 21, 1981",
+    "dateAcquiredIso": "1981-08-21",
+    "registrationStatus": null,
+    "engineNumber": null,
+    "chassisNumber": null,
+    "image": "/images/mock-assets/Morita-firetruck.png",
+    "sourceDocument": "/Users/johnmichaell.benito/Downloads/ISUZU MORITA PERSPECTIVE VIEW (2).docx",
+    "notes": [
+      "Based on current station account, the fire truck arrived in Asingan on August 21, 1981.",
+      "The date June 3, 2005 from the source document is being treated as the LTO registration date rather than the original historical arrival date.",
+      "This vehicle is regarded locally as historically old and is notable for remaining operational."
+    ]
+  },
+  {
+    "id": "jiangte-dongfeng-fire-truck",
+    "name": "JIANGTE DONGFENG FIRE TRUCK",
+    "type": "Fire Truck",
+    "description": null,
+    "capacityDisplay": "500 Gallons",
+    "capacityGallons": 500,
+    "plateNumber": null,
+    "plateDisplay": "No Available Plate",
+    "dateAcquiredDisplay": "15 February 2015",
+    "dateAcquiredIso": "2015-02-15",
+    "registrationStatus": null,
+    "engineNumber": null,
+    "chassisNumber": null,
+    "stationHeadAtAcquisition": "FINSP LORETO M BERNARDINO",
+    "mayorAtAcquisition": "Heidee Chua",
+    "image": "/images/mock-assets/Jiangte-firettruck.png",
+    "sourceDocument": "/Users/johnmichaell.benito/Downloads/JIANGTE PERSPECTIVE.docx",
+    "notes": [
+      "Based on current station account, this fire truck belongs to the period of FINSP LORETO M BERNARDINO.",
+      "Based on current station account, this fire truck was acquired during the administration of Mayor Heidee Chua."
+    ]
+  },
+  {
+    "id": "asingan-fire-station-ambulance-toyota-2008",
+    "name": "ASINGAN FIRE STATION AMBULANCE",
+    "type": "Ambulance",
+    "description": "TOYOTA 2008 Ambulance, Gasoline",
+    "capacityDisplay": null,
+    "capacityGallons": null,
+    "plateNumber": null,
+    "plateDisplay": "Not Registered",
+    "dateAcquiredDisplay": null,
+    "dateAcquiredIso": null,
+    "registrationStatus": "Not Registered",
+    "engineNumber": "2TR0693605",
+    "chassisNumber": "TRH226-0005337",
+    "image": "/images/mock-assets/Toyota-japan-ambulance.png",
+    "sourceDocument": "/Users/johnmichaell.benito/Downloads/TOYOTA 2008 Perspective.docx",
+    "notes": [
+      "No OR / CR issued by higher office.",
+      "Based on current station account, once the Toyota Japan ambulance was in service, Asingan Fire Station was handling close to or not below 100 EMS responses per year.",
+      "The exact arrival date of this ambulance in station service has not yet been confirmed."
+    ]
+  },
+  {
+    "id": "honda-wave",
+    "name": "HONDA WAVE",
+    "type": "Motorcycle",
+    "description": null,
+    "capacityDisplay": null,
+    "capacityGallons": null,
+    "plateNumber": null,
+    "plateDisplay": null,
+    "dateAcquiredDisplay": "2018 (approximate)",
+    "dateAcquiredIso": null,
+    "registrationStatus": null,
+    "engineNumber": null,
+    "chassisNumber": null,
+    "image": "/images/mock-assets/Honda-wave.png",
+    "sourceDocument": null,
+    "notes": [
+      "Saved as an official station asset based on project input.",
+      "Year was provided as approximate only."
+    ]
+  },
+  {
+    "id": "l300-rtv",
+    "name": "L300 RTV",
+    "type": "Utility Vehicle",
+    "description": null,
+    "capacityDisplay": null,
+    "capacityGallons": null,
+    "plateNumber": null,
+    "plateDisplay": null,
+    "dateAcquiredDisplay": "2017 (turned over to the station)",
+    "dateAcquiredIso": null,
+    "registrationStatus": null,
+    "engineNumber": null,
+    "chassisNumber": null,
+    "stationHeadAtAcquisition": "FINSP LORETO M BERNARDINO",
+    "mayorAtAcquisition": "Heidee Chua",
+    "image": "/images/mock-assets/L300-Rtv.png",
+    "sourceDocument": null,
+    "notes": [
+      "Saved as an official station asset based on project input.",
+      "The year provided refers to turnover to the station; exact turnover date was not provided.",
+      "Based on current station account, the L300 helped make BFP Asingan more recognized for patient transport.",
+      "Based on current station account, this vehicle belongs to the period of FINSP LORETO M BERNARDINO and the administration of Mayor Heidee Chua."
+    ]
+  }
+]
