@@ -270,6 +270,7 @@ export interface HomePageData {
     title: string;
     src: string;
     alt: string;
+    description: string;
   }[];
   historyPreview: HistoryEventRecord[];
   assetPreview: VehicleAssetRecord[];
@@ -348,6 +349,7 @@ const ASINGAN_POPULATION_REFERENCE = 57811;
 const ASINGAN_BPLO_2025_ESTABLISHMENTS = 1568;
 const INSPECTOR_RANK_PATTERN = /INSP/;
 const FIRE_OFFICER_RANK_PATTERN = /^(?:SFO[1-4]|FO[1-4])$/;
+const ARCHIVED_PERSONNEL_IDS = new Set(["harry-f-carig"]);
 const PERSONNEL_IMAGE_VARIANTS = [
   {
     sourcePrefix: "/images/mock-personnel/personnels/",
@@ -418,21 +420,29 @@ const CITIZEN_CHARTER_FLOWCHARTS = [
     title: "FSEC application flowchart",
     src: "/images/bfp-info/citizen-charter-1.jpg",
     alt: "Citizen charter flowchart for Application for Fire Safety Evaluation Clearance",
+    description:
+      "This guide is for applicants securing a building permit. The Fire Safety Evaluation Clearance (FSEC) is the fire safety prerequisite for plans, construction, renovation, and similar proposals before the building permit can proceed.",
   },
   {
     title: "FSIC for Certificate of Occupancy",
     src: "/images/bfp-info/citizen-charter-2.jpg",
     alt: "Citizen charter flowchart for Application for Fire Safety Inspection Certificate for Certificate of Occupancy",
+    description:
+      "This guide is for applicants securing an occupancy permit from the Office of the Building Official (OBO). The FSIC for Certificate of Occupancy is the fire safety prerequisite before the occupancy permit can be issued.",
   },
   {
     title: "FSIC for new business permit with valid occupancy FSIC",
     src: "/images/bfp-info/citizen-charter-3.jpg",
     alt: "Citizen charter flowchart for Application for Fire Safety Inspection Certificate for New Business Permit with valid FSIC for Certificate of Occupancy",
+    description:
+      "This guide is for new business permit applicants whose establishment already has a valid FSIC for Certificate of Occupancy. It shows the fire safety prerequisite before the business permit can proceed. For renewals, the business-related FSIC should still be valid.",
   },
   {
     title: "FSIC for new business permit without valid occupancy FSIC",
     src: "/images/bfp-info/citizen-charter-4.jpg",
     alt: "Citizen charter flowchart for Application for Fire Safety Inspection Certificate for New Business Permit without valid FSIC for Certificate of Occupancy",
+    description:
+      "This guide is for new business permit applicants whose establishment does not yet have a valid FSIC for Certificate of Occupancy. The premises must first be evaluated for the required fire safety compliance before the business permit can proceed, and in many cases a new building is also expected to complete its occupancy-related requirements first.",
   },
 ];
 const HOME_HERO_IMAGES = [
@@ -611,6 +621,10 @@ function statusLabel(status: string): string {
     return "Workbook-derived";
   }
   return "Needs confirmation";
+}
+
+function isCurrentPersonnelId(personId: string): boolean {
+  return !ARCHIVED_PERSONNEL_IDS.has(personId);
 }
 
 function historyEventSortValue(event: HistoryEventRecord): number {
@@ -955,6 +969,7 @@ async function loadSiteSnapshot(): Promise<SiteSnapshot> {
     .map((record) => buildPersonSummary(record.id))
     .filter((record): record is PersonSummary => Boolean(record))
     .sort(comparePeople);
+  const currentPersonnelProfiles = people.filter((person) => isCurrentPersonnelId(person.id));
 
   const currentHead = buildRoleSummary(
     organization.stationHeadRole.roleId,
@@ -965,7 +980,7 @@ async function loadSiteSnapshot(): Promise<SiteSnapshot> {
   const unitCount = groups.reduce((total, group) => total + group.units.length, 0);
   const stats: StatItem[] = [
     {
-      value: String(personnelFile.records.length).padStart(2, "0"),
+      value: String(currentPersonnelProfiles.length).padStart(2, "0"),
       label: "Personnel profiles",
       detail: "Public-safe personnel profiles currently listed on the website.",
     },
@@ -1016,6 +1031,7 @@ export async function loadHomePageData(): Promise<HomePageData> {
   const snapshot = await loadSiteSnapshot();
   const fireTruckCount = snapshot.vehicleAssets.filter((asset) => asset.type === "Fire Truck").length;
   const ambulanceCount = snapshot.vehicleAssets.filter((asset) => asset.type === "Ambulance").length;
+  const currentPersonnelCount = snapshot.people.filter((person) => isCurrentPersonnelId(person.id)).length;
   const homeStats: StatItem[] = [
     {
       value: String(fireTruckCount).padStart(2, "0"),
@@ -1028,7 +1044,7 @@ export async function loadHomePageData(): Promise<HomePageData> {
       detail: "Emergency medical transport support for rescue operations.",
     },
     {
-      value: String(snapshot.people.length).padStart(2, "0"),
+      value: String(currentPersonnelCount).padStart(2, "0"),
       label: "Personnel serving",
       detail: "Personnel contributing to station operations and community safety.",
     },
@@ -1093,13 +1109,14 @@ export async function loadOrganizationPageData(): Promise<OrganizationPageData> 
 
 export async function loadPersonnelPageData(): Promise<PersonnelPageData> {
   const snapshot = await loadSiteSnapshot();
+  const currentPeople = snapshot.people.filter((person) => isCurrentPersonnelId(person.id));
 
   return {
     people: snapshot.people,
     totals: {
-      profileCount: snapshot.people.length,
-      serviceHistoryCount: snapshot.people.filter((person) => person.serviceHistoryEncoded).length,
-      leadershipCount: snapshot.people.filter((person) => person.leadershipRoleTitles.length > 0).length,
+      profileCount: currentPeople.length,
+      serviceHistoryCount: currentPeople.filter((person) => person.serviceHistoryEncoded).length,
+      leadershipCount: currentPeople.filter((person) => person.leadershipRoleTitles.length > 0).length,
     },
     caution: [
       "Only publicly shareable profile details are shown in this directory.",

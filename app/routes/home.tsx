@@ -24,7 +24,6 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     homeImages,
     missionVision,
     missionVisionPosters,
-    serviceHighlights,
     stats,
   } = loaderData;
   const [
@@ -145,29 +144,15 @@ export default function Home({ loaderData }: Route.ComponentProps) {
           <SurfaceCard as="article" variant="home">
             <SectionHeading
               eyebrow="Services"
-              title="Public guides and online access are now in one place."
+              title="Service guides and online access live on one page."
             />
             <p className="charter-section__note">
-              Citizen Charter references and the official FSIS portal are grouped on the
-              Services page so the home page stays focused on station overview and identity.
+              The Services page provides fire safety information, Citizen Charter references, and
+              access to official online services for the community.
             </p>
-            <div className="service-grid">
-              {serviceHighlights.slice(0, 4).map((service, index) => (
-                <article className="service-card" key={service.title}>
-                  <p className="service-card__eyebrow">
-                    Service {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-                </article>
-              ))}
-            </div>
             <div className="button-row">
               <Link className="button button--primary" to="/services">
                 Open services page
-              </Link>
-              <Link className="button button--secondary" to="/history">
-                Read station history
               </Link>
             </div>
           </SurfaceCard>
