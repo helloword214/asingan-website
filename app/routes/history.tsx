@@ -115,8 +115,8 @@ export default function History({ loaderData }: Route.ComponentProps) {
           </div>
         </SurfaceCard>
 
-        <section className="content-grid">
-          <SurfaceCard as="article" variant="spotlight">
+        <section className="content-grid history-feature-grid history-feature-grid--transition">
+          <SurfaceCard as="article" className="history-card history-card--earlier" variant="spotlight">
             <p className="eyebrow">Earlier station building</p>
             <div className="asset-spotlight">
               <div className="media-frame media-frame--landscape media-frame--asset-hero">
@@ -136,7 +136,7 @@ export default function History({ loaderData }: Route.ComponentProps) {
             </div>
           </SurfaceCard>
 
-          <SurfaceCard as="article" variant="spotlight">
+          <SurfaceCard as="article" className="history-card history-card--demolition" variant="spotlight">
             <p className="eyebrow">Demolition photo set</p>
             {demolitionEvent ? (
               <>
@@ -148,7 +148,7 @@ export default function History({ loaderData }: Route.ComponentProps) {
                 </div>
               </>
             ) : null}
-            <div className="history-photo-grid">
+            <div className="history-photo-grid history-photo-grid--demolition">
               {demolitionPhotos.map((photo, index) => (
                 <figure className="history-photo-card" key={photo.src}>
                   <div className="media-frame media-frame--landscape">
@@ -172,67 +172,73 @@ export default function History({ loaderData }: Route.ComponentProps) {
           </SurfaceCard>
         </section>
 
-        <section className="content-grid">
-          <SurfaceCard as="article" variant="spotlight">
-            <p className="eyebrow">2019 recognition</p>
-            {award2019Event ? (
-              <>
-                <h2>{award2019Event.title}</h2>
-                <p className="lede">{award2019Event.summary}</p>
-                <div className="badge-row">
-                  <span className="status-pill status-pill--neutral">{award2019Event.type}</span>
-                  <span className="status-pill status-pill--neutral">
-                    {award2019Event.dateDisplay}
-                  </span>
-                </div>
-              </>
-            ) : null}
-            <figure className="history-photo-card">
-              <div className="media-frame media-frame--landscape">
-                <img
-                  className="media-frame__image media-frame__image--cover"
-                  src={awardPhoto2019.src}
-                  alt={awardPhoto2019.alt}
-                  loading="lazy"
-                />
+        <section className="content-grid history-feature-grid history-feature-grid--recognition">
+          <SurfaceCard
+            as="article"
+            className="history-card history-card--recognition-2019"
+            variant="spotlight"
+          >
+            <div className="history-recognition-card history-recognition-card--2019">
+              <div className="history-recognition-copy">
+                <p className="eyebrow">2019 recognition</p>
+                {award2019Event ? (
+                  <>
+                    <h2>{award2019Event.title}</h2>
+                    <p className="lede">{award2019Event.summary}</p>
+                  </>
+                ) : null}
               </div>
-              <figcaption className="history-photo-card__caption">
-                Best Municipal Fire Station in Pangasinan for 2019
-              </figcaption>
-            </figure>
+              <figure className="history-photo-card">
+                <div className="media-frame media-frame--landscape">
+                  <img
+                    className="media-frame__image media-frame__image--cover"
+                    src={awardPhoto2019.src}
+                    alt={awardPhoto2019.alt}
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="history-photo-card__caption">
+                  Best Municipal Fire Station in Pangasinan for 2019
+                </figcaption>
+              </figure>
+            </div>
           </SurfaceCard>
 
-          <SurfaceCard as="article" variant="spotlight">
-            <p className="eyebrow">2022 recognition</p>
-            {award2022Event ? (
-              <>
-                <h2>{award2022Event.title}</h2>
-                <p className="lede">{award2022Event.summary}</p>
-                <div className="badge-row">
-                  <span className="status-pill status-pill--neutral">{award2022Event.type}</span>
-                  <span className="status-pill status-pill--neutral">
-                    {award2022Event.dateDisplay}
-                  </span>
-                </div>
-              </>
-            ) : null}
-            <div className="history-award-grid">
-              {awardPhotos2022.map((photo) => (
-                <figure
-                  className={`history-photo-card${photo.featured ? " history-award-card--featured" : ""}`}
-                  key={photo.src}
-                >
-                  <div className="media-frame history-award-frame">
-                    <img
-                      className="history-award-frame__image"
-                      src={photo.src}
-                      alt={photo.alt}
-                      loading="lazy"
-                    />
-                  </div>
-                  <figcaption className="history-photo-card__caption">{photo.caption}</figcaption>
-                </figure>
-              ))}
+          <SurfaceCard
+            as="article"
+            className="history-card history-card--recognition-2022"
+            variant="spotlight"
+          >
+            <div className="history-recognition-card history-recognition-card--2022">
+              <div className="history-recognition-copy">
+                <p className="eyebrow">2022 recognition</p>
+                {award2022Event ? (
+                  <>
+                    <h2>{award2022Event.title}</h2>
+                    <p className="lede">{award2022Event.summary}</p>
+                  </>
+                ) : null}
+              </div>
+              <div className="history-award-grid history-award-grid--2022">
+                {awardPhotos2022.map((photo) => (
+                  <figure
+                    className={`history-photo-card${photo.featured ? " history-award-card--featured" : ""}`}
+                    key={photo.src}
+                  >
+                    <div
+                      className={`media-frame history-award-frame${photo.featured ? " history-award-frame--featured" : " history-award-frame--supporting"}`}
+                    >
+                      <img
+                        className="history-award-frame__image"
+                        src={photo.src}
+                        alt={photo.alt}
+                        loading="lazy"
+                      />
+                    </div>
+                    <figcaption className="history-photo-card__caption">{photo.caption}</figcaption>
+                  </figure>
+                ))}
+              </div>
             </div>
           </SurfaceCard>
         </section>

@@ -35,7 +35,21 @@ export async function loader({ params }: Route.LoaderArgs) {
 
 export default function PersonnelProfile({ loaderData }: Route.ComponentProps) {
   const { person } = loaderData;
+  const hasAssignmentDetails =
+    person.leadershipRoleTitles.length > 0 || person.currentDesignations.length > 0;
   const profileFacts = [
+    person.currentStationLabel
+      ? {
+          label: "Current station",
+          value: person.currentStationLabel,
+        }
+      : null,
+    person.statusOfAppointment
+      ? {
+          label: "Status of appointment",
+          value: person.statusOfAppointment,
+        }
+      : null,
     {
       label: "Highest training",
       value: person.mandatoryTraining ?? "Not listed",
@@ -52,23 +66,24 @@ export default function PersonnelProfile({ loaderData }: Route.ComponentProps) {
       label: "Years in service",
       value: person.lengthOfServiceDisplay ?? "Not listed",
     },
-  ];
+  ].filter((fact): fact is { label: string; value: string } => Boolean(fact));
 
   return (
     <div className="page">
       <div className="page__container">
         <PageHeader
+          className="page-header--personnel-profile"
           actions={
-            <Link className="panel-link" to="/personnel">
+            <Link className="panel-link panel-link--back" to="/personnel">
               Back to personnel directory
             </Link>
           }
           eyebrow="Personnel profile"
-          lede="Basic public profile details and recorded station assignments where available."
+          lede="Profile details, current assignment, and station service history."
           title={person.displayName}
         />
 
-        <SurfaceCard variant="spotlight">
+        <SurfaceCard className="person-profile-card" variant="spotlight">
           <div className="profile-hero">
             <div className="media-frame media-frame--portrait media-frame--profile">
               {person.photo ? (
@@ -83,21 +98,13 @@ export default function PersonnelProfile({ loaderData }: Route.ComponentProps) {
             </div>
 
             <div className="profile-hero__body">
-              <div>
-                <p className="person-card__rank">{person.rank ?? "Personnel"}</p>
-                <h2>{person.displayName}</h2>
-              </div>
-
-              <div className="badge-row">
-                {person.leadershipRoleTitles.length > 0 ? (
-                  <span className="status-pill status-pill--confirmed">Leadership role shown</span>
-                ) : null}
-                {person.currentDesignations.length > 0 ? (
-                  <span className="status-pill status-pill--neutral">Current designations listed</span>
-                ) : null}
-                {person.currentStationLabel ? (
-                  <span className="status-pill status-pill--neutral">{person.currentStationLabel}</span>
-                ) : null}
+              <div className="person-profile__intro">
+                <p className="eyebrow">Service profile</p>
+                <h2>Profile summary</h2>
+                <p className="person-profile__lead">
+                  This page highlights current assignment details and key service information for{" "}
+                  {person.displayName}.
+                </p>
               </div>
 
               <dl className="person-card__facts person-card__facts--profile">
@@ -112,51 +119,66 @@ export default function PersonnelProfile({ loaderData }: Route.ComponentProps) {
           </div>
         </SurfaceCard>
 
-        <SurfaceCard as="section">
+        <SurfaceCard as="section" className="person-profile-section">
           <p className="eyebrow">Current assignment</p>
-
-          {person.leadershipRoleTitles.length > 0 ? (
-            <>
-              <p className="person-card__section-label">Leadership and unit roles</p>
-              <div className="badge-row">
-                {person.leadershipRoleTitles.map((role) => (
-                  <span className="status-pill status-pill--confirmed" key={role}>
-                    {role}
-                  </span>
-                ))}
-              </div>
-            </>
+          {person.currentStationLabel ? (
+            <p className="person-profile__meta">Currently serving at {person.currentStationLabel}.</p>
           ) : null}
 
-          {person.currentDesignations.length > 0 ? (
-            <>
-              <p className="person-card__section-label">Current designations</p>
-              <div className="badge-row">
-                {person.currentDesignations.map((designation) => (
-                  <span className="status-pill status-pill--neutral" key={designation}>
-                    {designation}
-                  </span>
-                ))}
-              </div>
-            </>
-          ) : null}
+          {hasAssignmentDetails ? (
+            <div className="person-section-grid">
+              {person.leadershipRoleTitles.length > 0 ? (
+                <article className="service-card person-assignment-card">
+                  <p className="person-card__section-label">Leadership and unit roles</p>
+                  <div className="badge-row">
+                    {person.leadershipRoleTitles.map((role) => (
+                      <span className="status-pill status-pill--confirmed" key={role}>
+                        {role}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ) : null}
 
-          {person.leadershipRoleTitles.length === 0 && person.currentDesignations.length === 0 ? (
-            <p className="person-card__note">No current leadership or designation detail is shown in this view.</p>
-          ) : null}
+              {person.currentDesignations.length > 0 ? (
+                <article className="service-card person-assignment-card">
+                  <p className="person-card__section-label">Current designations</p>
+                  <div className="badge-row">
+                    {person.currentDesignations.map((designation) => (
+                      <span className="status-pill status-pill--neutral" key={designation}>
+                        {designation}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ) : null}
+            </div>
+          ) : (
+            <p className="person-card__note">
+              No current leadership or designation detail is shown in this view.
+            </p>
+          )}
         </SurfaceCard>
 
-        <SurfaceCard>
+        <SurfaceCard className="person-profile-section">
           <p className="eyebrow">Station assignments</p>
 
           {person.stationAssignments.length > 0 ? (
             <>
-              <p className="person-card__section-label">Recorded stations</p>
-              <div className="timeline-grid">
+              <p className="person-profile__meta">
+                Past and present station assignments shown from the available service record.
+              </p>
+              <div className="person-station-grid">
                 {person.stationAssignments.map((assignment) => (
-                  <article className="timeline-preview__item" key={`${assignment.station}-${assignment.years}`}>
-                    <p>{assignment.years}</p>
+                  <article
+                    className={`person-station-card${assignment.current ? " person-station-card--current" : ""}`}
+                    key={`${assignment.station}-${assignment.years}`}
+                  >
+                    <p className="story-card__date">{assignment.years}</p>
                     <h2>{assignment.station}</h2>
+                    {assignment.current ? (
+                      <p className="person-station-card__flag">Current station</p>
+                    ) : null}
                   </article>
                 ))}
               </div>

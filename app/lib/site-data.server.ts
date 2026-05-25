@@ -317,10 +317,8 @@ export interface HistoryPageData {
 }
 
 export interface AssetsPageData {
-  featuredAsset: VehicleAssetRecord | null;
   assets: VehicleAssetRecord[];
   typeCounts: LabeledCount[];
-  notes: string[];
 }
 
 interface RoleCatalogItem {
@@ -1147,16 +1145,7 @@ export async function loadAssetsPageData(): Promise<AssetsPageData> {
   const snapshot = await loadSiteSnapshot();
 
   return {
-    featuredAsset:
-      snapshot.vehicleAssets.find((asset) => asset.id === "isuzu-morita") ??
-      snapshot.vehicleAssets[0] ??
-      null,
     assets: snapshot.vehicleAssets,
     typeCounts: countLabels(snapshot.vehicleAssets.map((asset) => asset.type)),
-    notes: [
-      "The fleet includes fire trucks, an ambulance, and support vehicles used in station response work.",
-      "Some assets carry added historical value as part of the station's growth over the years.",
-      "This page highlights both operational use and the role each vehicle plays in serving the community.",
-    ],
   };
 }

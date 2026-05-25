@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { Link } from "react-router";
 
 import { SectionHeading } from "~/components/ui/section-heading";
@@ -20,14 +21,14 @@ export async function loader() {
 
 export default function Home({ loaderData }: Route.ComponentProps) {
   const {
-    citizenCharterFlowcharts,
     homeImages,
     missionVision,
     missionVisionPosters,
+    serviceHighlights,
     stats,
   } = loaderData;
   const [
-    municipalCenterImage,
+    ,
     roadCorridorImage,
     stationFrontageImage,
     stationExteriorImage,
@@ -35,17 +36,29 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     facadeImage,
   ] = homeImages;
   const heroPrimaryImage = stationFrontageImage ?? vehicleLineupImage ?? homeImages[0] ?? null;
-  const heroSupportImages = [vehicleLineupImage, municipalCenterImage]
-    .filter((image): image is NonNullable<typeof homeImages[number]> => Boolean(image))
-    .slice(0, 2);
   const stationStackImages = [stationExteriorImage, facadeImage].filter(
     (image): image is NonNullable<typeof homeImages[number]> => Boolean(image),
   );
+  const heroResponsiveGalleryImages = [
+    vehicleLineupImage,
+    stationExteriorImage,
+    heroPrimaryImage,
+    facadeImage,
+    roadCorridorImage,
+  ]
+    .filter((image): image is NonNullable<typeof homeImages[number]> => Boolean(image))
+    .filter((image, index, images) => {
+      return images.findIndex((candidate) => candidate.src === image.src) === index;
+    })
+    .slice(0, 3);
+  const heroPanelStyle = heroPrimaryImage
+    ? ({ "--hero-image": `url("${heroPrimaryImage.src}")` } as CSSProperties)
+    : undefined;
 
   return (
     <div className="page">
       <div className="page__container">
-        <section className="hero-panel surface-card">
+        <section className="hero-panel surface-card" style={heroPanelStyle}>
           <div className="hero-panel__copy">
             <p className="eyebrow">Asingan Fire Station</p>
             <h1>Working Together for a Safer Asingan</h1>
@@ -55,39 +68,42 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               municipality through dedicated public service.
             </p>
             <div className="button-row">
-              <Link className="button button--primary" to="/assets">
-                View apparatus
+              <Link className="button button--primary" to="/services">
+                Explore services
               </Link>
-              <Link className="button button--secondary" to="/history">
-                Read station history
+              <Link className="button button--secondary" to="/assets">
+                View apparatus
               </Link>
             </div>
           </div>
-          <div className="hero-panel__media">
-            {heroPrimaryImage ? (
-              <>
-                <div className="hero-mosaic hero-mosaic--home" aria-label="Station and municipal views">
-                  <img src={heroPrimaryImage.src} alt={heroPrimaryImage.alt} />
-                  {heroSupportImages.map((image) => (
-                    <img key={image.src} src={image.src} alt={image.alt} />
-                  ))}
-                </div>
-                <p className="hero-panel__media-note">
-                  Station frontage, response vehicles, and municipal context at a glance.
-                </p>
-              </>
-            ) : null}
+          {heroResponsiveGalleryImages.length > 0 ? (
+            <div className="hero-panel__mobile-gallery" aria-hidden="true">
+              {heroResponsiveGalleryImages.map((image, index) => (
+                <figure
+                  className={`hero-panel__mobile-card${
+                    index === 0 ? " hero-panel__mobile-card--feature" : ""
+                  }`}
+                  key={image.src}
+                >
+                  <img
+                    className="hero-panel__mobile-card-image"
+                    src={image.src}
+                    alt=""
+                    loading={index === 0 ? "eager" : "lazy"}
+                  />
+                </figure>
+              ))}
+            </div>
+          ) : null}
+          <div className="stat-grid stat-grid--home hero-panel__stats">
+            {stats.map((stat) => (
+              <article className="stat-card stat-card--home" key={stat.label}>
+                <p className="stat-card__value">{stat.value}</p>
+                <h2 className="stat-card__label">{stat.label}</h2>
+                <p className="stat-card__detail">{stat.detail}</p>
+              </article>
+            ))}
           </div>
-        </section>
-
-        <section className="stat-grid stat-grid--home">
-          {stats.map((stat) => (
-            <article className="stat-card stat-card--home" key={stat.label}>
-              <p className="stat-card__value">{stat.value}</p>
-              <h2 className="stat-card__label">{stat.label}</h2>
-              <p className="stat-card__detail">{stat.detail}</p>
-            </article>
-          ))}
         </section>
 
         <section className="content-grid">
@@ -128,32 +144,31 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 
           <SurfaceCard as="article" variant="home">
             <SectionHeading
-              eyebrow="Citizen charter"
-              title="Public guides that support safer homes, buildings, and businesses."
+              eyebrow="Services"
+              title="Public guides and online access are now in one place."
             />
             <p className="charter-section__note">
-              Step-by-step references that help residents and establishments prepare the
-              requirements for key fire safety transactions.
+              Citizen Charter references and the official FSIS portal are grouped on the
+              Services page so the home page stays focused on station overview and identity.
             </p>
-            <div className="charter-section charter-section--standalone">
-              <div className="charter-grid">
-                {citizenCharterFlowcharts.map((flowchart, index) => (
-                  <figure className="charter-card" key={flowchart.title}>
-                    <img
-                      className="charter-card__image"
-                      src={flowchart.src}
-                      alt={flowchart.alt}
-                      loading="lazy"
-                    />
-                    <figcaption className="charter-card__caption">
-                      <span className="charter-card__index">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <span>{flowchart.title}</span>
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
+            <div className="service-grid">
+              {serviceHighlights.slice(0, 4).map((service, index) => (
+                <article className="service-card" key={service.title}>
+                  <p className="service-card__eyebrow">
+                    Service {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </article>
+              ))}
+            </div>
+            <div className="button-row">
+              <Link className="button button--primary" to="/services">
+                Open services page
+              </Link>
+              <Link className="button button--secondary" to="/history">
+                Read station history
+              </Link>
             </div>
           </SurfaceCard>
         </section>
