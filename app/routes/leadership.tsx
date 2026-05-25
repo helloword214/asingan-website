@@ -18,6 +18,7 @@ export async function loader() {
 }
 
 const LEADERSHIP_NOTE_PREVIEW_LENGTH = 180;
+const LEADERSHIP_NOTE_PREVIEW_LENGTH_COMPACT = 108;
 const LEADERSHIP_MODAL_BREAKPOINT = "(max-width: 840px)";
 
 type FireMarshalEntry = Awaited<ReturnType<typeof loadLeadershipPageData>>["fireMarshalTimeline"][number];
@@ -47,17 +48,20 @@ function useMediaQuery(query: string) {
   return matches;
 }
 
-function splitLeadershipNote(note: string): { preview: string; remainder: string } {
+function splitLeadershipNote(
+  note: string,
+  previewLength: number = LEADERSHIP_NOTE_PREVIEW_LENGTH,
+): { preview: string; remainder: string } {
   const trimmed = note.trim();
 
-  if (trimmed.length <= LEADERSHIP_NOTE_PREVIEW_LENGTH) {
+  if (trimmed.length <= previewLength) {
     return { preview: trimmed, remainder: "" };
   }
 
-  let cutIndex = trimmed.lastIndexOf(" ", LEADERSHIP_NOTE_PREVIEW_LENGTH);
+  let cutIndex = trimmed.lastIndexOf(" ", previewLength);
 
-  if (cutIndex < Math.floor(LEADERSHIP_NOTE_PREVIEW_LENGTH * 0.7)) {
-    cutIndex = LEADERSHIP_NOTE_PREVIEW_LENGTH;
+  if (cutIndex < Math.floor(previewLength * 0.7)) {
+    cutIndex = previewLength;
   }
 
   return {
@@ -66,9 +70,17 @@ function splitLeadershipNote(note: string): { preview: string; remainder: string
   };
 }
 
-function LeadershipNote({ note, className }: { note: string; className: string }) {
+function LeadershipNote({
+  note,
+  className,
+  previewLength = LEADERSHIP_NOTE_PREVIEW_LENGTH,
+}: {
+  note: string;
+  className: string;
+  previewLength?: number;
+}) {
   const [expanded, setExpanded] = useState(false);
-  const { preview, remainder } = splitLeadershipNote(note);
+  const { preview, remainder } = splitLeadershipNote(note, previewLength);
 
   if (!remainder) {
     return <p className={className}>{note}</p>;
@@ -144,6 +156,71 @@ function formatLeadershipTerm(entry: {
   return "Length not listed";
 }
 
+function formatLeadershipTermCompact(entry: {
+  termStartDisplay: string;
+  termEndDisplay: string;
+  termStartIso?: string | null;
+  termEndIso?: string | null;
+}): string {
+  const fullTerm = formatLeadershipTerm(entry);
+
+  return fullTerm
+    .replace(/ years?/g, " yr")
+    .replace(/ months?/g, " mo")
+    .replace(",", "");
+}
+
+function formatLeadershipDateCompact(entry: {
+  termStartDisplay: string;
+  termEndDisplay: string;
+  termStartIso?: string | null;
+  termEndIso?: string | null;
+}): string {
+  const formatter = new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    year: "numeric",
+  });
+
+  if (entry.termStartIso) {
+    const startDate = formatter.format(new Date(entry.termStartIso));
+    const endDate = entry.termEndIso
+      ? formatter.format(new Date(entry.termEndIso))
+      : entry.termEndDisplay;
+    return `${startDate} - ${endDate}`;
+  }
+
+  const startYear = extractYear(entry.termStartDisplay);
+  const endYear = entry.termEndIso
+    ? new Date(entry.termEndIso).getFullYear()
+    : extractYear(entry.termEndDisplay);
+
+  if (startYear && endYear) {
+    return `${startYear} - ${endYear}`;
+  }
+
+  return `${entry.termStartDisplay} - ${entry.termEndDisplay}`;
+}
+
+function formatLeadershipDatePreview(entry: {
+  termStartDisplay: string;
+  termEndDisplay: string;
+  termStartIso?: string | null;
+  termEndIso?: string | null;
+}): string {
+  const startYear = entry.termStartIso
+    ? new Date(entry.termStartIso).getFullYear()
+    : extractYear(entry.termStartDisplay);
+  const endYear = entry.termEndIso
+    ? new Date(entry.termEndIso).getFullYear()
+    : extractYear(entry.termEndDisplay);
+
+  if (startYear && endYear) {
+    return startYear === endYear ? `${startYear}` : `${startYear} - ${endYear}`;
+  }
+
+  return formatLeadershipDateCompact(entry);
+}
+
 function LeadershipEntryMedia({
   entry,
   className,
@@ -169,10 +246,16 @@ function LeadershipEntryMedia({
 function LeadershipEntryDetails({
   entry,
   headingLevel,
+  compact = false,
+  previewLength = LEADERSHIP_NOTE_PREVIEW_LENGTH,
+  showStatus = true,
   titleId,
 }: {
   entry: FireMarshalEntry;
   headingLevel: "h2" | "h3";
+  compact?: boolean;
+  previewLength?: number;
+  showStatus?: boolean;
   titleId?: string;
 }) {
   const HeadingTag = headingLevel;
@@ -182,24 +265,32 @@ function LeadershipEntryDetails({
       <div className="leadership-entry__meta">
         <div className="leadership-entry__time">
           <p className="timeline-card__term">
-            {entry.termStartDisplay} to {entry.termEndDisplay}
+            {compact
+              ? formatLeadershipDateCompact(entry)
+              : `${entry.termStartDisplay} to ${entry.termEndDisplay}`}
           </p>
           <p className="leadership-tenure">
-            Leadership term: {formatLeadershipTerm(entry)}
+            {compact ? `Term ${formatLeadershipTermCompact(entry)}` : `Leadership term: ${formatLeadershipTerm(entry)}`}
           </p>
         </div>
-        <span
-          className={`status-pill ${
-            entry.status === "present" ? "status-pill--confirmed" : "status-pill--neutral"
-          }`}
-        >
-          {entry.status === "present" ? "Current fire marshal" : "Past fire marshal"}
-        </span>
+        {showStatus ? (
+          <span
+            className={`status-pill ${
+              entry.status === "present" ? "status-pill--confirmed" : "status-pill--neutral"
+            }`}
+          >
+            {entry.status === "present" ? "Current fire marshal" : "Past fire marshal"}
+          </span>
+        ) : null}
       </div>
 
       <HeadingTag id={titleId}>{entry.displayName}</HeadingTag>
       {(entry.notes?.length ?? 0) > 0 ? (
-        <LeadershipNote className="leadership-entry__note" note={entry.notes?.[0] ?? ""} />
+        <LeadershipNote
+          className="leadership-entry__note"
+          note={entry.notes?.[0] ?? ""}
+          previewLength={previewLength}
+        />
       ) : (
         <p className="leadership-entry__note">
           Part of the station's continuing line of leadership and public service.
@@ -232,14 +323,12 @@ function LeadershipMobilePreviewCard({
       />
 
       <div className="leadership-mobile-card__body">
-        <p className="timeline-card__term">
-          {entry.termStartDisplay} to {entry.termEndDisplay}
-        </p>
+        <div className="leadership-mobile-card__topline">
+          <p className="timeline-card__term">{formatLeadershipDatePreview(entry)}</p>
+          <p className="leadership-tenure">{formatLeadershipTermCompact(entry)}</p>
+        </div>
         <h3>{entry.displayName}</h3>
-        <p className="leadership-tenure">
-          Leadership term: {formatLeadershipTerm(entry)}
-        </p>
-        <span className="leadership-mobile-card__hint">Tap to view full profile</span>
+        <span className="leadership-mobile-card__hint">View profile</span>
       </div>
     </button>
   );
@@ -414,7 +503,6 @@ export default function Leadership({ loaderData }: Route.ComponentProps) {
 
         <SurfaceCard className="leadership-flow-card">
           <SectionHeading
-            actions={<span className="status-pill status-pill--neutral">{fireMarshalTimeline.length} fire marshals</span>}
             eyebrow="Leadership succession"
             title="A continuing line of fire marshal service."
           />
@@ -474,7 +562,7 @@ export default function Leadership({ loaderData }: Route.ComponentProps) {
                 <div className="leadership-modal__header-copy">
                   <p className="leadership-modal__eyebrow">Leadership succession</p>
                   <p className="leadership-modal__hint">
-                    Fire marshal {visibleLeadershipIndex + 1} of {leadershipHistoryEntries.length}. Swipe to browse.
+                    Profile {visibleLeadershipIndex + 1} of {leadershipHistoryEntries.length}. Swipe to browse.
                   </p>
                 </div>
                 <button
@@ -516,8 +604,11 @@ export default function Leadership({ loaderData }: Route.ComponentProps) {
 
                       <div className="leadership-entry__body leadership-entry__body--modal">
                         <LeadershipEntryDetails
+                          compact
                           entry={entry}
                           headingLevel="h2"
+                          previewLength={LEADERSHIP_NOTE_PREVIEW_LENGTH_COMPACT}
+                          showStatus={false}
                           titleId={`leadership-modal-title-${index}`}
                         />
                       </div>

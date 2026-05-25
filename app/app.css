@@ -2770,6 +2770,10 @@ img {
   gap: 1rem;
 }
 
+.leadership-flow--compact {
+  gap: 0.72rem;
+}
+
 .leadership-mobile-card {
   appearance: none;
   width: 100%;
@@ -2787,30 +2791,56 @@ img {
   color: inherit;
   cursor: pointer;
   display: grid;
-  gap: 0.9rem;
-  padding: 1rem;
+  grid-template-columns: minmax(5.75rem, 6.5rem) minmax(0, 1fr);
+  align-items: center;
+  gap: 0.78rem;
+  padding: 0.74rem;
   text-align: left;
 }
 
 .leadership-mobile-card__media {
-  min-height: 13.5rem;
+  min-height: 7.7rem;
 }
 
 .leadership-mobile-card__body {
   display: grid;
-  gap: 0.55rem;
+  min-width: 0;
+  gap: 0.38rem;
+  align-content: center;
+}
+
+.leadership-mobile-card__topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.28rem 0.46rem;
+  align-items: center;
+}
+
+.leadership-mobile-card__topline .timeline-card__term {
+  font-size: 0.74rem;
+}
+
+.leadership-mobile-card__topline .leadership-tenure {
+  width: max-content;
+  padding: 0.14rem 0.46rem;
+  border-radius: 999px;
+  background: rgba(var(--accent-rgb), 0.08);
+  color: rgba(93, 74, 57, 0.88);
+  font-size: 0.71rem;
+  line-height: 1.2;
 }
 
 .leadership-mobile-card__body h3 {
   margin: 0;
-  font-size: 1.08rem;
+  font-size: 0.96rem;
+  line-height: 1.28;
 }
 
 .leadership-mobile-card__hint {
   color: rgba(var(--accent-rgb), 0.92);
-  font-size: 0.8rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -2888,7 +2918,7 @@ img {
 
 .leadership-entry__body--modal h2 {
   margin: 0;
-  font-size: clamp(1.3rem, 4vw, 1.7rem);
+  font-size: clamp(1.18rem, 4vw, 1.45rem);
 }
 
 .leadership-entry__meta {
@@ -2956,7 +2986,7 @@ img {
   inset: 0;
   z-index: 50;
   display: grid;
-  align-items: end;
+  align-items: center;
   padding: 1rem;
 }
 
@@ -2974,10 +3004,10 @@ img {
   margin-inline: auto;
   display: grid;
   grid-template-rows: auto auto minmax(0, 1fr);
-  gap: 0.8rem;
-  min-height: min(78vh, 42rem);
+  gap: 0.56rem;
+  min-height: min(72vh, 37rem);
   max-height: calc(100vh - 2rem);
-  padding: 0.95rem;
+  padding: 0.78rem;
   border-radius: calc(var(--radius-lg) + 0.2rem);
   border: 1px solid rgba(255, 255, 255, 0.62);
   background:
@@ -3000,12 +3030,12 @@ img {
   display: flex;
   align-items: start;
   justify-content: space-between;
-  gap: 0.85rem;
+  gap: 0.72rem;
 }
 
 .leadership-modal__header-copy {
   display: grid;
-  gap: 0.24rem;
+  gap: 0.2rem;
 }
 
 .leadership-modal__eyebrow {
@@ -3020,8 +3050,8 @@ img {
 .leadership-modal__hint {
   margin: 0;
   color: var(--muted-strong);
-  font-size: 0.84rem;
-  line-height: 1.45;
+  font-size: 0.74rem;
+  line-height: 1.34;
 }
 
 .leadership-modal__close {
@@ -3030,10 +3060,10 @@ img {
   background: rgba(255, 255, 255, 0.78);
   color: var(--text);
   border-radius: 999px;
-  min-height: 2.5rem;
-  padding: 0.62rem 0.92rem;
+  min-height: 2.3rem;
+  padding: 0.54rem 0.86rem;
   font: inherit;
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 10px 22px rgba(82, 39, 11, 0.1);
@@ -3047,7 +3077,7 @@ img {
 .leadership-modal__progress {
   display: flex;
   align-items: center;
-  gap: 0.36rem;
+  gap: 0.3rem;
 }
 
 .leadership-modal__progress-dot {
@@ -3067,7 +3097,7 @@ img {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
-  gap: 0.8rem;
+  gap: 0.68rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   overscroll-behavior-x: contain;
@@ -3094,16 +3124,40 @@ img {
 .leadership-entry__card--modal {
   min-height: 100%;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 0.64rem;
+  padding: 0.8rem;
 }
 
 .leadership-entry__media--modal {
-  min-height: 18rem;
+  min-height: 11.8rem;
   touch-action: pan-y pinch-zoom;
 }
 
 .leadership-entry__media--modal .media-frame__image {
   touch-action: pan-y pinch-zoom;
+}
+
+.leadership-entry__body--modal {
+  gap: 0.58rem;
+}
+
+.leadership-entry__body--modal .leadership-entry__meta {
+  gap: 0.28rem;
+  padding-bottom: 0.18rem;
+}
+
+.leadership-entry__body--modal .timeline-card__term {
+  font-size: 0.78rem;
+}
+
+.leadership-entry__body--modal .leadership-tenure {
+  font-size: 0.75rem;
+  line-height: 1.38;
+}
+
+.leadership-entry__body--modal .leadership-entry__note {
+  font-size: 0.9rem;
+  line-height: 1.58;
 }
 
 .asset-spotlight {
@@ -4388,8 +4442,19 @@ img {
     scroll-padding-inline: 0;
     scroll-snap-type: x mandatory;
     overscroll-behavior-x: contain;
-    touch-action: pan-x pinch-zoom;
+    touch-action: pan-x pan-y pinch-zoom;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .leadership-flow--compact {
+    grid-auto-flow: row;
+    grid-auto-columns: unset;
+    overflow: visible;
+    gap: 0.72rem;
+    padding-bottom: 0;
+    scroll-snap-type: none;
+    overscroll-behavior-x: auto;
+    touch-action: auto;
   }
 
   .leadership-flow::before {
