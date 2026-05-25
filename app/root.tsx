@@ -271,6 +271,9 @@ export function Layout({ children }: { children: ReactNode }) {
                       <span className="site-footer__address-line site-footer__mobile-only">
                         Google Maps
                       </span>
+                      <span className="site-footer__address-link site-footer__mobile-only">
+                        Open in Maps
+                      </span>
                       <span className="site-footer__address-link site-footer__desktop-only">
                         Open in Google Maps
                       </span>
@@ -312,6 +315,9 @@ export function Layout({ children }: { children: ReactNode }) {
                       </span>
                       <span className="site-footer__action-title site-footer__mobile-only">
                         Facebook
+                      </span>
+                      <span className="site-footer__action-value site-footer__mobile-only">
+                        Official station page
                       </span>
                       <span className="site-footer__action-value site-footer__desktop-only">
                         Official station page
