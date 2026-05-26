@@ -11,12 +11,11 @@
     "dateAcquiredDisplay": "09 December 2022",
     "dateAcquiredIso": "2022-12-09",
     "registrationStatus": null,
-    "engineNumber": null,
-    "chassisNumber": null,
+    "engineNumber": "J08EWF111410",
+    "chassisNumber": "JHDFG8JJ7NXX10618",
     "stationHeadAtAcquisition": "FINSP ROGELIO S QUIZON JR",
     "mayorAtAcquisition": "Carlos F. Lopez Jr.",
     "image": "/images/mock-assets/Hino-firetruck.png",
-    "sourceDocument": "/Users/johnmichaell.benito/Downloads/HINO PERSPECTIVE.docx",
     "notes": [
       "Based on current station account, this fire truck belongs to the period of FINSP ROGELIO S QUIZON JR.",
       "Based on current station account, this fire truck was acquired during the administration of Mayor Carlos F. Lopez Jr."
@@ -34,12 +33,11 @@
     "dateAcquiredDisplay": "August 21, 1981",
     "dateAcquiredIso": "1981-08-21",
     "registrationStatus": null,
-    "engineNumber": null,
-    "chassisNumber": null,
+    "engineNumber": "6BD1-740287",
+    "chassisNumber": "JCR420-3379505",
     "stationHeadAtAcquisition": "INSP FELIX G BALLESTEROS",
     "mayorAtAcquisition": "Carlos D. Lopez Sr.",
     "image": "/images/mock-assets/Morita-firetruck.png",
-    "sourceDocument": "/Users/johnmichaell.benito/Downloads/ISUZU MORITA PERSPECTIVE VIEW (2).docx",
     "notes": [
       "Based on current station account, the fire truck arrived in Asingan on August 21, 1981.",
       "The date June 3, 2005 from the source document is being treated as the LTO registration date rather than the original historical arrival date.",
@@ -63,7 +61,6 @@
     "stationHeadAtAcquisition": "FINSP LORETO M BERNARDINO",
     "mayorAtAcquisition": "Heidee G Chua",
     "image": "/images/mock-assets/Jiangte-firettruck.png",
-    "sourceDocument": "/Users/johnmichaell.benito/Downloads/JIANGTE PERSPECTIVE.docx",
     "notes": [
       "Based on current station account, this fire truck belongs to the period of FINSP LORETO M BERNARDINO.",
       "Based on current station account, this fire truck was acquired during the administration of Mayor Heidee G Chua."
@@ -111,9 +108,7 @@
     "mayorAtAcquisition": "Heidee G Chua",
     "image": "/images/mock-assets/Honda-wave.png",
     "sourceDocument": null,
-    "notes": [
-      "Saved as an official station asset based on project input."
-    ]
+    "notes": ["Saved as an official station asset based on project input."]
   },
   {
     "id": "l300-rtv",

@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import { Link } from "react-router";
 
+import { AppImage } from "~/components/ui/app-image";
 import { SectionHeading } from "~/components/ui/section-heading";
 import { SurfaceCard } from "~/components/ui/surface-card";
 import type { Route } from "./+types/home";
@@ -58,21 +59,29 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     <div className="page">
       <div className="page__container">
         <section className="hero-panel surface-card" style={heroPanelStyle}>
-          <div className="hero-panel__copy">
-            <p className="eyebrow">Asingan Fire Station</p>
-            <h1>Working Together for a Safer Asingan</h1>
-            <p className="lede">
-              From emergency response and fire suppression to prevention and community
-              preparedness, Asingan Fire Station continues to serve and support the safety of the
-              municipality through dedicated public service.
-            </p>
-            <div className="button-row">
-              <Link className="button button--primary" to="/services">
-                Explore services
-              </Link>
-              <Link className="button button--secondary" to="/assets">
-                View apparatus
-              </Link>
+          <div
+            className="hero-panel__copy heading-stage heading-stage--hero"
+            data-reveal-stage="copy"
+          >
+            <div className="heading-stage__content">
+              <p className="eyebrow heading-stage__eyebrow">Asingan Fire Station</p>
+              <span aria-hidden="true" className="heading-stage__rail" />
+              <div className="heading-stage__title-wrap">
+                <h1 className="heading-stage__title">Working Together for a Safer Asingan</h1>
+              </div>
+              <p className="lede heading-stage__lede">
+                From emergency response and fire suppression to prevention and community
+                preparedness, Asingan Fire Station continues to serve and support the safety of the
+                municipality through dedicated public service.
+              </p>
+              <div className="button-row heading-stage__actions">
+                <Link className="button button--primary" to="/services">
+                  Explore services
+                </Link>
+                <Link className="button button--secondary" to="/assets">
+                  View apparatus
+                </Link>
+              </div>
             </div>
           </div>
           {heroResponsiveGalleryImages.length > 0 ? (
@@ -84,11 +93,11 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                   }`}
                   key={image.src}
                 >
-                  <img
+                  <AppImage
                     className="hero-panel__mobile-card-image"
                     src={image.src}
                     alt=""
-                    loading={index === 0 ? "eager" : "lazy"}
+                    priority={index === 0}
                   />
                 </figure>
               ))}
@@ -121,7 +130,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 <p className="mission-block__text">{missionVision.vision}</p>
               </article>
             </div>
-            <p className="mission-block__note">
+            <p className="mission-block__note heading-stage__support">
               Together, these statements guide how the station protects lives, strengthens
               preparedness, and serves the community.
             </p>
@@ -129,11 +138,10 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               {missionVisionPosters.map((poster) => (
                 <figure className="poster-card" key={poster.title}>
                   <div className="media-frame media-frame--poster">
-                    <img
+                    <AppImage
                       className="media-frame__image media-frame__image--cover"
                       src={poster.src}
                       alt={poster.alt}
-                      loading="lazy"
                     />
                   </div>
                 </figure>
@@ -146,7 +154,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               eyebrow="Services"
               title="Service guides and online access live on one page."
             />
-            <p className="charter-section__note">
+            <p className="charter-section__note heading-stage__support">
               The Services page provides fire safety information, Citizen Charter references, and
               access to official online services for the community.
             </p>
@@ -164,7 +172,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
               eyebrow="Station grounds"
               title="See the spaces that support response, readiness, and public service."
             />
-            <p className="station-showcase__copy">
+            <p className="station-showcase__copy heading-stage__support">
               These views bring the station closer to the reader and highlight the place behind
               daily response, prevention, and community support.
             </p>
@@ -173,11 +181,10 @@ export default function Home({ loaderData }: Route.ComponentProps) {
           <div className="station-showcase__grid">
             {vehicleLineupImage ? (
               <figure className="station-showcase__feature">
-                <img
+                <AppImage
                   className="station-showcase__image station-showcase__image--feature"
                   src={vehicleLineupImage.src}
                   alt={vehicleLineupImage.alt}
-                  loading="lazy"
                 />
                 <figcaption className="station-showcase__caption">{vehicleLineupImage.title}</figcaption>
               </figure>
@@ -186,11 +193,10 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             <div className="station-showcase__stack">
               {stationStackImages.map((image) => (
                 <figure className="station-showcase__stack-item" key={image.src}>
-                  <img
+                  <AppImage
                     className="station-showcase__image"
                     src={image.src}
                     alt={image.alt}
-                    loading="lazy"
                   />
                   <figcaption className="station-showcase__caption">{image.title}</figcaption>
                 </figure>
@@ -199,11 +205,10 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 
             {roadCorridorImage ? (
               <figure className="station-showcase__context">
-                <img
+                <AppImage
                   className="station-showcase__image station-showcase__image--context"
                   src={roadCorridorImage.src}
                   alt={roadCorridorImage.alt}
-                  loading="lazy"
                 />
                 <figcaption className="station-showcase__context-body">
                   <p className="station-showcase__caption">{roadCorridorImage.title}</p>

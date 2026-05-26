@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { AppImage } from "~/components/ui/app-image";
 import { PageHeader } from "~/components/ui/page-header";
 import { SectionHeading } from "~/components/ui/section-heading";
 import { SurfaceCard } from "~/components/ui/surface-card";
@@ -231,7 +232,7 @@ function LeadershipEntryMedia({
   return (
     <div className={className}>
       {entry.image ? (
-        <img
+        <AppImage
           className="media-frame__image media-frame__image--contain"
           src={entry.image}
           alt={entry.displayName}
@@ -467,10 +468,11 @@ export default function Leadership({ loaderData }: Route.ComponentProps) {
             <div className="leadership-spotlight__layout">
               <div className="media-frame media-frame--portrait media-frame--timeline leadership-spotlight__media">
                 {currentFireMarshal.image ? (
-                  <img
+                  <AppImage
                     className="media-frame__image media-frame__image--contain"
                     src={currentFireMarshal.image}
                     alt={currentFireMarshal.displayName}
+                    priority
                   />
                 ) : (
                   <div className="media-frame__placeholder">Photo unavailable</div>

@@ -1,6 +1,8 @@
 import { Link } from "react-router";
 
+import { AppImage } from "~/components/ui/app-image";
 import { PageHeader } from "~/components/ui/page-header";
+import { SectionIntro } from "~/components/ui/section-intro";
 import { SurfaceCard } from "~/components/ui/surface-card";
 import type { Route } from "./+types/personnel.$personId";
 import { loadPersonnelProfilePageData } from "~/lib/site-data.server";
@@ -87,10 +89,11 @@ export default function PersonnelProfile({ loaderData }: Route.ComponentProps) {
           <div className="profile-hero">
             <div className="media-frame media-frame--portrait media-frame--profile">
               {person.photo ? (
-                <img
+                <AppImage
                   className="media-frame__image media-frame__image--contain"
                   src={person.photo}
                   alt={person.displayName}
+                  priority
                 />
               ) : (
                 <div className="media-frame__placeholder">Photo unavailable</div>
@@ -98,14 +101,12 @@ export default function PersonnelProfile({ loaderData }: Route.ComponentProps) {
             </div>
 
             <div className="profile-hero__body">
-              <div className="person-profile__intro">
-                <p className="eyebrow">Service profile</p>
-                <h2>Profile summary</h2>
-                <p className="person-profile__lead">
-                  This page highlights current assignment details and key service information for{" "}
-                  {person.displayName}.
-                </p>
-              </div>
+              <SectionIntro
+                className="person-profile__intro"
+                eyebrow="Service profile"
+                lede={`This page highlights current assignment details and key service information for ${person.displayName}.`}
+                title="Profile summary"
+              />
 
               <dl className="person-card__facts person-card__facts--profile">
                 {profileFacts.map((fact) => (
@@ -120,10 +121,10 @@ export default function PersonnelProfile({ loaderData }: Route.ComponentProps) {
         </SurfaceCard>
 
         <SurfaceCard as="section" className="person-profile-section">
-          <p className="eyebrow">Current assignment</p>
-          {person.currentStationLabel ? (
-            <p className="person-profile__meta">Currently serving at {person.currentStationLabel}.</p>
-          ) : null}
+          <SectionIntro
+            eyebrow="Current assignment"
+            lede={person.currentStationLabel ? `Currently serving at ${person.currentStationLabel}.` : undefined}
+          />
 
           {hasAssignmentDetails ? (
             <div className="person-section-grid">
@@ -161,13 +162,12 @@ export default function PersonnelProfile({ loaderData }: Route.ComponentProps) {
         </SurfaceCard>
 
         <SurfaceCard className="person-profile-section">
-          <p className="eyebrow">Station assignments</p>
-
           {person.stationAssignments.length > 0 ? (
             <>
-              <p className="person-profile__meta">
-                Past and present station assignments shown from the available service record.
-              </p>
+              <SectionIntro
+                eyebrow="Station assignments"
+                lede="Past and present station assignments shown from the available service record."
+              />
               <div className="person-station-grid">
                 {person.stationAssignments.map((assignment) => (
                   <article
@@ -184,7 +184,10 @@ export default function PersonnelProfile({ loaderData }: Route.ComponentProps) {
               </div>
             </>
           ) : (
-            <p className="person-card__note">No recorded station assignment is shown on this profile.</p>
+            <>
+              <SectionIntro eyebrow="Station assignments" />
+              <p className="person-card__note">No recorded station assignment is shown on this profile.</p>
+            </>
           )}
         </SurfaceCard>
       </div>

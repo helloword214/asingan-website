@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { PageHeader } from "~/components/ui/page-header";
 import { SectionHeading } from "~/components/ui/section-heading";
+import { SectionIntro } from "~/components/ui/section-intro";
 import { SurfaceCard } from "~/components/ui/surface-card";
 import { loadOrganizationPageData, type OrganizationPageData } from "~/lib/site-data.server";
 
@@ -204,7 +205,7 @@ export default function Organization({ loaderData }: { loaderData: OrganizationP
 
         <section className="content-grid">
           <SurfaceCard as="article">
-            <p className="eyebrow">Acronym glossary</p>
+            <SectionIntro eyebrow="Acronym glossary" />
             <div className="glossary-grid">
               {glossary.map((entry) => (
                 <div className="glossary-item" key={entry.acronym}>
@@ -216,7 +217,7 @@ export default function Organization({ loaderData }: { loaderData: OrganizationP
           </SurfaceCard>
 
           <SurfaceCard as="article">
-            <p className="eyebrow">How to read the chart</p>
+            <SectionIntro eyebrow="How to read the chart" />
             <ul className="note-list">
               {chartGuide.map((note) => (
                 <li key={note}>{note}</li>

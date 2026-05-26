@@ -1,6 +1,8 @@
 import { useState } from "react";
 
+import { AppImage } from "~/components/ui/app-image";
 import { PageHeader } from "~/components/ui/page-header";
+import { SectionIntro } from "~/components/ui/section-intro";
 import { SurfaceCard } from "~/components/ui/surface-card";
 import type { Route } from "./+types/assets";
 import { loadAssetsPageData } from "~/lib/site-data.server";
@@ -133,24 +135,24 @@ export default function Assets({ loaderData }: Route.ComponentProps) {
 
         <section className="asset-overview-grid">
           <SurfaceCard as="article" className="asset-overview-card asset-overview-card--fleet" variant="spotlight">
-            <p className="eyebrow">Vehicle fleet overview</p>
-            <h2 className="asset-overview-card__title">{totalVehiclesLabel} are currently shown on this page.</h2>
-            <p className="asset-overview-card__copy">
-              This section now stays focused on the station's vehicle lineup, with each card centered on the vehicle
-              itself rather than a separate featured highlight.
-            </p>
-            <div className="badge-row">
-              <span className="status-pill status-pill--neutral">Total vehicles: {totalVehicles}</span>
-              {typeCounts.map((typeCount) => (
-                <span className="status-pill status-pill--neutral" key={typeCount.label}>
-                  {typeCount.label}: {typeCount.count}
-                </span>
-              ))}
-            </div>
-            <p className="asset-overview-card__copy">
-              The current fleet mix shown here includes {fleetMixLabel}. Flip any vehicle card below to view
-              acquisition details, capacity, plate information, and station context when those details are available.
-            </p>
+            <SectionIntro
+              eyebrow="Vehicle fleet overview"
+              lede="This section now stays focused on the station's vehicle lineup, with each card centered on the vehicle itself rather than a separate featured highlight."
+              title={`${totalVehiclesLabel} are currently shown on this page.`}
+            >
+              <div className="badge-row">
+                <span className="status-pill status-pill--neutral">Total vehicles: {totalVehicles}</span>
+                {typeCounts.map((typeCount) => (
+                  <span className="status-pill status-pill--neutral" key={typeCount.label}>
+                    {typeCount.label}: {typeCount.count}
+                  </span>
+                ))}
+              </div>
+              <p className="asset-overview-card__copy">
+                The current fleet mix shown here includes {fleetMixLabel}. Flip any vehicle card below to view
+                acquisition details, capacity, plate information, and station context when those details are available.
+              </p>
+            </SectionIntro>
           </SurfaceCard>
         </section>
 
@@ -176,7 +178,7 @@ export default function Assets({ loaderData }: Route.ComponentProps) {
                       <div className="asset-card__visual">
                         <div className="media-frame media-frame--landscape media-frame--asset-card asset-card__frame asset-card__frame--page asset-card__media">
                           {asset.image ? (
-                            <img
+                            <AppImage
                               className="media-frame__image media-frame__image--contain media-frame__image--asset asset-card__image"
                               src={asset.image}
                               alt={asset.name}

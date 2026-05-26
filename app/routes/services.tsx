@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type TouchEvent } from "react";
 
+import { AppImage } from "~/components/ui/app-image";
 import { PageHeader } from "~/components/ui/page-header";
 import { SectionHeading } from "~/components/ui/section-heading";
 import { SurfaceCard } from "~/components/ui/surface-card";
@@ -248,7 +249,7 @@ export default function Services({ loaderData }: Route.ComponentProps) {
                 eyebrow="FSIS online system"
                 title="Continue fire safety applications through the official FSIS portal."
               />
-              <p className="fsis-spotlight__copy">
+              <p className="fsis-spotlight__copy heading-stage__support">
                 Applicants can use the Fire Safety Inspection System to register, prepare
                 requirements, submit transactions, and monitor updates online through the official
                 Bureau of Fire Protection platform.
@@ -263,11 +264,10 @@ export default function Services({ loaderData }: Route.ComponentProps) {
                 type="button"
               >
                 <div className="media-frame media-frame--fsis">
-                  <img
+                  <AppImage
                     className="media-frame__image media-frame__image--contain fsis-spotlight__image"
                     src={fsisOnlineGuideImage}
                     alt="FSIS Fire Safety Inspection System online application guide poster"
-                    loading="lazy"
                   />
                 </div>
               </button>
@@ -289,7 +289,7 @@ export default function Services({ loaderData }: Route.ComponentProps) {
               eyebrow="Service scope"
               title="Public safety work that supports the municipality."
             />
-            <p className="charter-section__note">
+            <p className="charter-section__note heading-stage__support">
               These service highlights summarize the station support areas already reflected in the
               current project materials.
             </p>
@@ -309,7 +309,7 @@ export default function Services({ loaderData }: Route.ComponentProps) {
             eyebrow="Citizen charter"
             title="Public guides that support safer homes, buildings, and businesses."
           />
-          <p className="charter-section__note">
+          <p className="charter-section__note heading-stage__support">
             Step-by-step references that help residents and establishments prepare the
             requirements for key fire safety transactions.
           </p>
@@ -323,12 +323,16 @@ export default function Services({ loaderData }: Route.ComponentProps) {
                     onClick={() => setOpenImageId(`citizen-charter-${index + 1}`)}
                     type="button"
                   >
-                    <img
-                      className="charter-card__image"
-                      src={flowchart.src}
-                      alt={flowchart.alt}
-                      loading="lazy"
-                    />
+                    <div className="media-frame media-frame--charter">
+                      <AppImage
+                        className="media-frame__image media-frame__image--contain charter-card__image"
+                        src={flowchart.src}
+                        alt={flowchart.alt}
+                        fetchPriority={index < 2 ? "high" : undefined}
+                        loading="eager"
+                        skeleton={false}
+                      />
+                    </div>
                     <span className="charter-card__caption">
                       <span className="charter-card__index">
                         {String(index + 1).padStart(2, "0")}
@@ -386,10 +390,11 @@ export default function Services({ loaderData }: Route.ComponentProps) {
                     className="service-image-modal__zoom-layer"
                     style={{ width: `${imageZoomScale * 100}%` }}
                   >
-                    <img
+                    <AppImage
                       className="media-frame__image media-frame__image--contain service-image-modal__image"
                       src={activeImage.src}
                       alt={activeImage.alt}
+                      priority
                     />
                   </div>
                 </div>

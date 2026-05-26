@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 
+import { AppImage } from "~/components/ui/app-image";
 import { PageHeader } from "~/components/ui/page-header";
 import { SectionHeading } from "~/components/ui/section-heading";
 import { SurfaceCard } from "~/components/ui/surface-card";
@@ -89,7 +90,7 @@ function PersonnelCardContent({
     <>
       <span className="media-frame media-frame--square media-frame--person-list person-list__media">
         {person.photo ? (
-          <img
+          <AppImage
             className="media-frame__image media-frame__image--cover"
             src={person.photo}
             alt=""
@@ -346,7 +347,7 @@ export default function PersonnelIndex({ loaderData }: Route.ComponentProps) {
                       <div className="person-preview-modal__card">
                         <div className="media-frame media-frame--portrait media-frame--profile person-preview-modal__media">
                           {person.photo ? (
-                            <img
+                            <AppImage
                               className="media-frame__image media-frame__image--contain"
                               src={person.photo}
                               alt={person.displayName}

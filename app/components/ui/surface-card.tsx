@@ -30,6 +30,7 @@ export function SurfaceCard<T extends ElementType = "section">({
         variant === "chart" && "panel-card--chart",
         className,
       )}
+      data-reveal-stage="surface"
       {...props}
     >
       {children}

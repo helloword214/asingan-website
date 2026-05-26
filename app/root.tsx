@@ -10,10 +10,11 @@ import {
   useLocation,
 } from "react-router";
 
+import { AppImage } from "./components/ui/app-image";
 import type { Route } from "./+types/root";
 import "./app.css";
 
-const navigation = [
+const primaryNavigation = [
   { to: "/", label: "Home", end: true },
   { to: "/services", label: "Services" },
   { to: "/history", label: "History" },
@@ -136,6 +137,76 @@ export function Layout({ children }: { children: ReactNode }) {
     };
   }, [isMobileNavOpen]);
 
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    let frameId = 0;
+    let observer: IntersectionObserver | null = null;
+
+    function isStageInView(element: HTMLElement) {
+      const rect = element.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+      const viewportTopTrigger = viewportHeight * 0.88;
+      const viewportBottomTrigger = viewportHeight * 0.14;
+
+      return rect.top <= viewportTopTrigger && rect.bottom >= viewportBottomTrigger;
+    }
+
+    frameId = window.requestAnimationFrame(() => {
+      const revealStages = Array.from(
+        document.querySelectorAll<HTMLElement>("[data-reveal-stage]"),
+      );
+
+      if (revealStages.length === 0) {
+        return;
+      }
+
+      if (typeof window.IntersectionObserver !== "function") {
+        revealStages.forEach((stage) => {
+          stage.classList.add("is-motion-ready", "is-in-view");
+        });
+        return;
+      }
+
+      observer = new window.IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            const target = entry.target as HTMLElement;
+            target.classList.add("is-in-view");
+            observer?.unobserve(target);
+          });
+        },
+        {
+          rootMargin: "0px 0px -12% 0px",
+          threshold: 0.08,
+        },
+      );
+
+      revealStages.forEach((stage) => {
+        stage.classList.add("is-motion-ready");
+
+        if (isStageInView(stage)) {
+          stage.classList.add("is-in-view");
+          return;
+        }
+
+        stage.classList.remove("is-in-view");
+        observer?.observe(stage);
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      observer?.disconnect();
+    };
+  }, [location.pathname]);
+
   return (
     <html lang="en">
       <head>
@@ -151,10 +222,12 @@ export function Layout({ children }: { children: ReactNode }) {
           <header className="site-header">
             <div className="site-header__inner">
               <a className="brand" href="/">
-                <img
+                <AppImage
                   className="brand__mark"
                   src="/images/branding/Asingan-fs-old-logo-icon.png"
                   alt="Asingan Fire Station logo"
+                  priority
+                  skeleton={false}
                 />
                 <span className="brand__copy">
                   <span className="brand__eyebrow">Bureau of Fire Protection</span>
@@ -174,7 +247,7 @@ export function Layout({ children }: { children: ReactNode }) {
               </button>
 
               <nav className="site-nav site-nav--desktop" aria-label="Primary">
-                {navigation.map((item) => (
+                {primaryNavigation.map((item) => (
                   <NavLink
                     key={item.to}
                     to={item.to}
@@ -217,7 +290,7 @@ export function Layout({ children }: { children: ReactNode }) {
                 </div>
 
                 <nav className="site-nav site-nav--mobile" id="mobile-primary-navigation" aria-label="Primary">
-                  {navigation.map((item) => (
+                  {primaryNavigation.map((item) => (
                     <NavLink
                       key={`mobile-${item.to}`}
                       to={item.to}
@@ -235,14 +308,19 @@ export function Layout({ children }: { children: ReactNode }) {
             </div>
           ) : null}
 
-          <main className="site-main">{children}</main>
+          <main className="site-main">
+            <div className="route-stage" key={location.pathname}>
+              {children}
+            </div>
+          </main>
           <footer className="site-footer">
             <div className="site-footer__inner">
               <a className="site-footer__brand" href="/">
-                <img
+                <AppImage
                   className="site-footer__brand-mark"
                   src="/images/branding/Asingan-fs-new-logo.jpeg"
                   alt="Asingan Fire Station logo"
+                  skeleton={false}
                 />
                 <span className="site-footer__brand-copy">
                   <span className="site-footer__brand-eyebrow">Bureau of Fire Protection</span>
@@ -365,7 +443,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     <Layout>
       <section className="page">
         <div className="page__container">
-          <div className="error-panel">
+          <div className="error-panel" data-reveal-stage="surface">
             <p className="eyebrow">Notice</p>
             <h1>{message}</h1>
             <p>{details}</p>

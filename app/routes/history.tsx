@@ -1,5 +1,7 @@
+import { AppImage } from "~/components/ui/app-image";
 import { PageHeader } from "~/components/ui/page-header";
 import { SectionHeading } from "~/components/ui/section-heading";
+import { SectionIntro } from "~/components/ui/section-intro";
 import { SurfaceCard } from "~/components/ui/surface-card";
 import type { Route } from "./+types/history";
 import { loadHistoryPageData } from "~/lib/site-data.server";
@@ -80,20 +82,23 @@ export default function History({ loaderData }: Route.ComponentProps) {
 
         <section className="content-grid">
           <SurfaceCard as="article">
-            <p className="eyebrow">Historical overview</p>
-            <div className="story-copy">
-              {introNarrative.map((paragraph) => (
-                <p className="story-copy__paragraph" key={paragraph}>
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+            <SectionIntro eyebrow="Historical overview">
+              <div className="story-copy">
+                {introNarrative.map((paragraph) => (
+                  <p className="story-copy__paragraph" key={paragraph}>
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </SectionIntro>
           </SurfaceCard>
 
           <SurfaceCard as="article">
-            <p className="eyebrow">In brief</p>
-            <h2>How the station took root in Asingan.</h2>
-            <p className="lede">{shortVersion}</p>
+            <SectionIntro
+              eyebrow="In brief"
+              lede={shortVersion}
+              title="How the station took root in Asingan."
+            />
           </SurfaceCard>
         </section>
 
@@ -117,46 +122,45 @@ export default function History({ loaderData }: Route.ComponentProps) {
 
         <section className="content-grid history-feature-grid history-feature-grid--transition">
           <SurfaceCard as="article" className="history-card history-card--earlier" variant="spotlight">
-            <p className="eyebrow">Earlier station building</p>
             <div className="asset-spotlight">
               <div className="media-frame media-frame--landscape media-frame--asset-hero">
-                <img
+                <AppImage
                   className="media-frame__image media-frame__image--cover"
                   src="/images/mock-station/history-fs/firestation-old.png"
                   alt="Earlier Asingan Fire Station building kept in the history image set"
                 />
               </div>
               <div className="asset-spotlight__body">
-                <h2>Earlier Asingan Fire Station structure before demolition</h2>
-                <p className="story-card__summary">
-                  The earlier station building remains an important part of the station's story
-                  before the transition into a newer home.
-                </p>
+                <SectionIntro
+                  eyebrow="Earlier station building"
+                  lede="The earlier station building remains an important part of the station's story before the transition into a newer home."
+                  title="Earlier Asingan Fire Station structure before demolition"
+                />
               </div>
             </div>
           </SurfaceCard>
 
           <SurfaceCard as="article" className="history-card history-card--demolition" variant="spotlight">
-            <p className="eyebrow">Demolition photo set</p>
             {demolitionEvent ? (
-              <>
-                <h2>{demolitionEvent.title}</h2>
-                <p className="lede">{demolitionEvent.summary}</p>
+              <SectionIntro
+                eyebrow="Demolition photo set"
+                lede={demolitionEvent.summary}
+                title={demolitionEvent.title}
+              >
                 <div className="badge-row">
                   <span className="status-pill status-pill--neutral">{demolitionEvent.type}</span>
                   <span className="status-pill status-pill--neutral">{demolitionEvent.dateDisplay}</span>
                 </div>
-              </>
+              </SectionIntro>
             ) : null}
             <div className="history-photo-grid history-photo-grid--demolition">
               {demolitionPhotos.map((photo, index) => (
                 <figure className="history-photo-card" key={photo.src}>
                   <div className="media-frame media-frame--landscape">
-                    <img
+                    <AppImage
                       className="media-frame__image media-frame__image--cover"
                       src={photo.src}
                       alt={photo.alt}
-                      loading="lazy"
                     />
                   </div>
                   <figcaption className="history-photo-card__caption">
@@ -180,21 +184,20 @@ export default function History({ loaderData }: Route.ComponentProps) {
           >
             <div className="history-recognition-card history-recognition-card--2019">
               <div className="history-recognition-copy">
-                <p className="eyebrow">2019 recognition</p>
                 {award2019Event ? (
-                  <>
-                    <h2>{award2019Event.title}</h2>
-                    <p className="lede">{award2019Event.summary}</p>
-                  </>
+                  <SectionIntro
+                    eyebrow="2019 recognition"
+                    lede={award2019Event.summary}
+                    title={award2019Event.title}
+                  />
                 ) : null}
               </div>
               <figure className="history-photo-card">
                 <div className="media-frame media-frame--landscape">
-                  <img
+                  <AppImage
                     className="media-frame__image media-frame__image--cover"
                     src={awardPhoto2019.src}
                     alt={awardPhoto2019.alt}
-                    loading="lazy"
                   />
                 </div>
                 <figcaption className="history-photo-card__caption">
@@ -211,12 +214,12 @@ export default function History({ loaderData }: Route.ComponentProps) {
           >
             <div className="history-recognition-card history-recognition-card--2022">
               <div className="history-recognition-copy">
-                <p className="eyebrow">2022 recognition</p>
                 {award2022Event ? (
-                  <>
-                    <h2>{award2022Event.title}</h2>
-                    <p className="lede">{award2022Event.summary}</p>
-                  </>
+                  <SectionIntro
+                    eyebrow="2022 recognition"
+                    lede={award2022Event.summary}
+                    title={award2022Event.title}
+                  />
                 ) : null}
               </div>
               <div className="history-award-grid history-award-grid--2022">
@@ -228,11 +231,10 @@ export default function History({ loaderData }: Route.ComponentProps) {
                     <div
                       className={`media-frame history-award-frame${photo.featured ? " history-award-frame--featured" : " history-award-frame--supporting"}`}
                     >
-                      <img
+                      <AppImage
                         className="history-award-frame__image"
                         src={photo.src}
                         alt={photo.alt}
-                        loading="lazy"
                       />
                     </div>
                     <figcaption className="history-photo-card__caption">{photo.caption}</figcaption>
