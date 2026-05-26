@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AppImage } from "~/components/ui/app-image";
+import { AppModal } from "~/components/ui/app-modal";
 import { PageHeader } from "~/components/ui/page-header";
 import { SectionHeading } from "~/components/ui/section-heading";
 import { SurfaceCard } from "~/components/ui/surface-card";
@@ -361,34 +362,6 @@ export default function Leadership({ loaderData }: Route.ComponentProps) {
       return;
     }
 
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.body.style.overflow = previousOverflow;
-    };
-  }, [openLeadershipIndex]);
-
-  useEffect(() => {
-    if (openLeadershipIndex === null) {
-      return;
-    }
-
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        setOpenLeadershipIndex(null);
-      }
-    }
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [openLeadershipIndex]);
-
-  useEffect(() => {
-    if (openLeadershipIndex === null) {
-      return;
-    }
-
     const modalRail = leadershipModalRailRef.current;
     const activeSlide = modalRail?.children[openLeadershipIndex];
 
@@ -546,56 +519,38 @@ export default function Leadership({ loaderData }: Route.ComponentProps) {
         </SurfaceCard>
 
         {isLeadershipModalMode && openLeadershipIndex !== null ? (
-          <div
-            aria-labelledby={`leadership-modal-title-${visibleLeadershipIndex}`}
-            aria-modal="true"
-            className="leadership-modal"
-            role="dialog"
+          <AppModal
+            ariaLabelledBy={`leadership-modal-title-${visibleLeadershipIndex}`}
+            bodyClassName="is-app-modal-header-hidden"
+            className="directory-preview-modal"
+            closeLabel="Close fire marshal profile modal"
+            headerContent={
+              <>
+                <p className="app-modal__eyebrow">Leadership succession</p>
+                <p className="app-modal__hint">
+                  Profile {visibleLeadershipIndex + 1} of {leadershipHistoryEntries.length}. Swipe to browse.
+                </p>
+              </>
+            }
+            onClose={closeLeadershipModal}
+            progress={leadershipHistoryEntries.map((entry, index) => (
+              <span
+                className={`app-modal__progress-dot${
+                  index === visibleLeadershipIndex ? " is-active" : ""
+                }`}
+                key={`leadership-modal-progress-${entry.id}-${entry.termStartDisplay}`}
+              />
+            ))}
+            sheetClassName="directory-preview-modal__sheet"
           >
-            <button
-              aria-label="Close fire marshal profile modal"
-              className="leadership-modal__backdrop"
-              onClick={closeLeadershipModal}
-              type="button"
-            />
-
-            <div className="leadership-modal__sheet">
-              <div className="leadership-modal__header">
-                <div className="leadership-modal__header-copy">
-                  <p className="leadership-modal__eyebrow">Leadership succession</p>
-                  <p className="leadership-modal__hint">
-                    Profile {visibleLeadershipIndex + 1} of {leadershipHistoryEntries.length}. Swipe to browse.
-                  </p>
-                </div>
-                <button
-                  aria-label="Close fire marshal profile modal"
-                  className="leadership-modal__close"
-                  onClick={closeLeadershipModal}
-                  type="button"
-                >
-                  Close
-                </button>
-              </div>
-
-              <div className="leadership-modal__progress" aria-hidden="true">
-                {leadershipHistoryEntries.map((entry, index) => (
-                  <span
-                    className={`leadership-modal__progress-dot${
-                      index === visibleLeadershipIndex ? " is-active" : ""
-                    }`}
-                    key={`leadership-modal-progress-${entry.id}-${entry.termStartDisplay}`}
-                  />
-                ))}
-              </div>
-
-              <div
-                className="leadership-modal__viewport"
-                onScroll={handleLeadershipModalScroll}
-                ref={leadershipModalRailRef}
-              >
+            <div
+              className="app-modal__viewport"
+              onScroll={handleLeadershipModalScroll}
+              ref={leadershipModalRailRef}
+            >
                 {leadershipHistoryEntries.map((entry, index) => (
                   <article
-                    className="leadership-modal__slide"
+                    className="app-modal__slide"
                     key={`leadership-modal-slide-${entry.id}-${entry.termStartDisplay}`}
                   >
                     <div className="leadership-entry__card leadership-entry__card--modal">
@@ -617,9 +572,8 @@ export default function Leadership({ loaderData }: Route.ComponentProps) {
                     </div>
                   </article>
                 ))}
-              </div>
             </div>
-          </div>
+          </AppModal>
         ) : null}
       </div>
     </div>

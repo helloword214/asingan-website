@@ -78,8 +78,8 @@ export default function Home({ loaderData }: Route.ComponentProps) {
                 <Link className="button button--primary" to="/services">
                   Explore services
                 </Link>
-                <Link className="button button--secondary" to="/assets">
-                  View apparatus
+                <Link className="button button--secondary" to="/personnel">
+                  Meet personnel
                 </Link>
               </div>
             </div>

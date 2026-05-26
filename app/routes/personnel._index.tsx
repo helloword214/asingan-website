@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 
 import { AppImage } from "~/components/ui/app-image";
+import { AppModal } from "~/components/ui/app-modal";
 import { PageHeader } from "~/components/ui/page-header";
 import { SectionHeading } from "~/components/ui/section-heading";
 import { SurfaceCard } from "~/components/ui/surface-card";
@@ -160,34 +161,6 @@ export default function PersonnelIndex({ loaderData }: Route.ComponentProps) {
       return;
     }
 
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.body.style.overflow = previousOverflow;
-    };
-  }, [openPersonnelIndex]);
-
-  useEffect(() => {
-    if (openPersonnelIndex === null) {
-      return;
-    }
-
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        setOpenPersonnelIndex(null);
-      }
-    }
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [openPersonnelIndex]);
-
-  useEffect(() => {
-    if (openPersonnelIndex === null) {
-      return;
-    }
-
     const modalRail = personnelModalRailRef.current;
     const activeSlide = modalRail?.children[openPersonnelIndex];
 
@@ -288,60 +261,42 @@ export default function PersonnelIndex({ loaderData }: Route.ComponentProps) {
         </SurfaceCard>
 
         {isPersonnelModalMode && openPersonnelIndex !== null ? (
-          <div
-            aria-labelledby={`personnel-modal-title-${visiblePersonnelIndex}`}
-            aria-modal="true"
-            className="leadership-modal"
-            role="dialog"
+          <AppModal
+            ariaLabelledBy={`personnel-modal-title-${visiblePersonnelIndex}`}
+            bodyClassName="is-app-modal-header-hidden"
+            className="directory-preview-modal"
+            closeLabel="Close personnel preview modal"
+            headerContent={
+              <>
+                <p className="app-modal__eyebrow">Personnel directory</p>
+                <p className="app-modal__hint">
+                  Profile {visiblePersonnelIndex + 1} of {sortedPeople.length}. Swipe to browse.
+                </p>
+              </>
+            }
+            onClose={closePersonnelModal}
+            progress={sortedPeople.map((person, index) => (
+              <span
+                className={`app-modal__progress-dot${
+                  index === visiblePersonnelIndex ? " is-active" : ""
+                }`}
+                key={`personnel-modal-progress-${person.id}`}
+              />
+            ))}
+            sheetClassName="directory-preview-modal__sheet person-preview-modal__sheet"
           >
-            <button
-              aria-label="Close personnel preview modal"
-              className="leadership-modal__backdrop"
-              onClick={closePersonnelModal}
-              type="button"
-            />
-
-            <div className="leadership-modal__sheet person-preview-modal__sheet">
-              <div className="leadership-modal__header">
-                <div className="leadership-modal__header-copy">
-                  <p className="leadership-modal__eyebrow">Personnel directory</p>
-                  <p className="leadership-modal__hint">
-                    Profile {visiblePersonnelIndex + 1} of {sortedPeople.length}. Swipe to browse.
-                  </p>
-                </div>
-                <button
-                  aria-label="Close personnel preview modal"
-                  className="leadership-modal__close"
-                  onClick={closePersonnelModal}
-                  type="button"
-                >
-                  Close
-                </button>
-              </div>
-
-              <div className="leadership-modal__progress" aria-hidden="true">
-                {sortedPeople.map((person, index) => (
-                  <span
-                    className={`leadership-modal__progress-dot${
-                      index === visiblePersonnelIndex ? " is-active" : ""
-                    }`}
-                    key={`personnel-modal-progress-${person.id}`}
-                  />
-                ))}
-              </div>
-
-              <div
-                className="leadership-modal__viewport"
-                onScroll={handlePersonnelModalScroll}
-                ref={personnelModalRailRef}
-              >
+            <div
+              className="app-modal__viewport"
+              onScroll={handlePersonnelModalScroll}
+              ref={personnelModalRailRef}
+            >
                 {sortedPeople.map((person, index) => {
                   const previewMeta = getPersonnelPreviewMeta(person);
                   const previewNote = getPersonnelPreviewNote(person);
 
                   return (
                     <article
-                      className="leadership-modal__slide"
+                      className="app-modal__slide"
                       key={`personnel-modal-slide-${person.id}`}
                     >
                       <div className="person-preview-modal__card">
@@ -382,9 +337,8 @@ export default function PersonnelIndex({ loaderData }: Route.ComponentProps) {
                     </article>
                   );
                 })}
-              </div>
             </div>
-          </div>
+          </AppModal>
         ) : null}
       </div>
     </div>

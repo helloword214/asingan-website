@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type TouchEvent } from "react";
 
 import { AppImage } from "~/components/ui/app-image";
+import { AppModal } from "~/components/ui/app-modal";
 import { PageHeader } from "~/components/ui/page-header";
 import { SectionHeading } from "~/components/ui/section-heading";
 import { SurfaceCard } from "~/components/ui/surface-card";
@@ -75,6 +76,11 @@ export default function Services({ loaderData }: Route.ComponentProps) {
   const [openImageId, setOpenImageId] = useState<string | null>(null);
   const [imageZoomScale, setImageZoomScale] = useState(MIN_SERVICE_IMAGE_SCALE);
   const activeImage = imagePreviews.find((image) => image.id === openImageId) ?? null;
+  const isFsisGuideOpen = activeImage?.id === "fsis-online-guide";
+  const serviceImageZoomLayerWidth =
+    isFsisGuideOpen && imageZoomScale === MIN_SERVICE_IMAGE_SCALE
+      ? "min(100%, 18rem)"
+      : `${imageZoomScale * 100}%`;
   const serviceImageFrameRef = useRef<HTMLDivElement | null>(null);
   const imageZoomScaleRef = useRef(MIN_SERVICE_IMAGE_SCALE);
   const pinchGestureRef = useRef({
@@ -85,34 +91,6 @@ export default function Services({ loaderData }: Route.ComponentProps) {
   useEffect(() => {
     imageZoomScaleRef.current = imageZoomScale;
   }, [imageZoomScale]);
-
-  useEffect(() => {
-    if (openImageId === null) {
-      return;
-    }
-
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.body.style.overflow = previousOverflow;
-    };
-  }, [openImageId]);
-
-  useEffect(() => {
-    if (openImageId === null) {
-      return;
-    }
-
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        setOpenImageId(null);
-      }
-    }
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [openImageId]);
 
   useEffect(() => {
     if (!activeImage) {
@@ -347,48 +325,32 @@ export default function Services({ loaderData }: Route.ComponentProps) {
         </SurfaceCard>
 
         {activeImage ? (
-          <div
-            aria-labelledby="services-image-modal-title"
-            aria-modal="true"
-            className="leadership-modal service-image-modal"
-            role="dialog"
+          <AppModal
+            ariaLabelledBy="services-image-modal-title"
+            bodyClassName="is-app-modal-header-hidden"
+            className="service-image-modal"
+            closeLabel="Close service image modal"
+            headerClassName="service-image-modal__header"
+            onClose={closeImageModal}
+            sheetClassName={`service-image-modal__sheet${
+              isFsisGuideOpen ? " service-image-modal__sheet--poster" : ""
+            }`}
           >
-            <button
-              aria-label="Close service image modal"
-              className="leadership-modal__backdrop"
-              onClick={closeImageModal}
-              type="button"
-            />
-
-            <div className="leadership-modal__sheet service-image-modal__sheet">
-              <div className="leadership-modal__header">
-                <div className="leadership-modal__header-copy">
-                  <p className="leadership-modal__eyebrow">{activeImage.eyebrow}</p>
-                  <p className="leadership-modal__hint">Tap outside the modal to close.</p>
-                </div>
-                <button
-                  aria-label="Close service image modal"
-                  className="leadership-modal__close"
-                  onClick={closeImageModal}
-                  type="button"
-                >
-                  Close
-                </button>
-              </div>
-
-              <div className="service-image-modal__content">
+            <div className="service-image-modal__content">
                 <div
                   className={`media-frame service-image-modal__frame${
                     imageZoomScale > MIN_SERVICE_IMAGE_SCALE ? " is-zoomed" : ""
-                  }`}
+                  }${isFsisGuideOpen ? " service-image-modal__frame--poster" : ""}`}
                   onTouchEnd={handleImageTouchEnd}
                   onTouchMove={handleImageTouchMove}
                   onTouchStart={handleImageTouchStart}
                   ref={serviceImageFrameRef}
                 >
                   <div
-                    className="service-image-modal__zoom-layer"
-                    style={{ width: `${imageZoomScale * 100}%` }}
+                    className={`service-image-modal__zoom-layer${
+                      isFsisGuideOpen ? " service-image-modal__zoom-layer--poster" : ""
+                    }`}
+                    style={{ width: serviceImageZoomLayerWidth }}
                   >
                     <AppImage
                       className="media-frame__image media-frame__image--contain service-image-modal__image"
@@ -438,8 +400,7 @@ export default function Services({ loaderData }: Route.ComponentProps) {
                   ) : null}
                 </div>
               </div>
-            </div>
-          </div>
+          </AppModal>
         ) : null}
       </div>
     </div>
